@@ -16,7 +16,7 @@ function Biography() {
     const styles = {
         name: {
             fontWeight: "bold",
-            fontSize: 24,
+            fontSize: 30,
         },
         topMenu: {
             marginLeft: 30
@@ -34,6 +34,14 @@ function Biography() {
         profileSection: {
             marginLeft: "auto",
             marginRight: "auto",
+        },
+        profileName: {
+            fontSize: 40,
+            marginTop: 10
+        },
+        profileExperience: {
+            fontSize: 20,
+            marginBottom: 20
         },
         biography: {
             fontSize: 18
@@ -86,9 +94,9 @@ function Biography() {
                                             src={process.env.PUBLIC_URL + "/images/hasan.jpg"}
                                             style={styles.userAvatar}/>
 
-                                    <h1 className={"fontStyle"}>Hasan Mhd Amin</h1>
-                                    <h2 className={"fontStyle subheading"}>Android Application Developer <br/>
-                                        Full Stack Developer</h2>
+                                    <div className={"fontStyle heading"} style={styles.profileName}>Hasan Mhd Amin</div>
+                                    <div className={"fontStyle subheading"} style={styles.profileExperience}>Android Application Developer <br/>
+                                        Full Stack Developer</div>
                                     <EmailIcon color="primary" style={{fontSize: 50}}/>
                                     <LinkedInIcon color="primary" style={{fontSize: 50}}/>
                                     <GitHubIcon color="primary" style={{fontSize: 50}}/>

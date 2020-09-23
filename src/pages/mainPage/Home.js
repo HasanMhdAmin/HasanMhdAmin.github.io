@@ -1,11 +1,16 @@
 import React from 'react';
 import '../../App.css';
 import Biography from "./sections/Biography";
+import Education from "./sections/Education";
 
 
 function Home() {
     return (
-        <Biography/>
+        <div>
+            <Biography/>
+            <Education/>
+        </div>
+
     );
 }
 
