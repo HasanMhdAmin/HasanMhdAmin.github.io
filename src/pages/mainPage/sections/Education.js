@@ -13,33 +13,27 @@ function Education() {
         topMenu: {
             marginLeft: 30
         },
-        cvHeader: {
-            // marginTop: 100,
-            paddingTop: 100,
+        background: {
+            // paddingTop: 100,
             backgroundColor: "#eeeeee"
-        },
-        userAvatar: {
-            margin: "auto",
-            width: 270,
-            height: 270,
         },
         titleSection: {
             marginLeft: "auto",
             marginRight: "auto",
-            fontSize: 25
+            marginTop: 50,
+            fontSize: 25,
+            lineHeight: 1,
+            textAlign: 'right',
         },
         contentSection: {
-            marginTop: 50
+            marginTop: 50,
+            paddingLeft: 40,
         },
         description: {
             fontSize: 18
         },
         detailedCV: {
             marginLeft: 18
-        },
-        paper: {
-            textAlign: 'center',
-            whiteSpace: 'nowrap',
         },
         uni: {
             fontSize: 25,
@@ -59,15 +53,15 @@ function Education() {
     };
 
     return (
-        <div>
+        <div style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
                     <Grid item lg={4}>
 
                         <div className={"fontStyle"}
-                             style={Object.assign(styles.titleSection, styles.paper)}>
+                             style={styles.titleSection}>
 
-                            <h1>Education</h1>
+                            <h1 className={"subheading"}>Education</h1>
 
                         </div>
                     </Grid>

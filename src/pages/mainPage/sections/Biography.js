@@ -22,7 +22,7 @@ function Biography() {
             marginLeft: 30
         },
         cvHeader: {
-            // marginTop: 100,
+            paddingBottom: 50,
             paddingTop: 100,
             backgroundColor: "#eeeeee"
         },
@@ -34,6 +34,8 @@ function Biography() {
         profileSection: {
             marginLeft: "auto",
             marginRight: "auto",
+            textAlign: 'center',
+
         },
         profileName: {
             fontSize: 40,
@@ -41,19 +43,15 @@ function Biography() {
         },
         profileExperience: {
             fontSize: 20,
-            marginBottom: 20
+            marginBottom: 20,
         },
         biography: {
-            fontSize: 18
+            fontSize: 18,
+            paddingLeft: 60,
         },
         detailedCV: {
             marginLeft: 18
         },
-        paper: {
-            textAlign: 'center',
-            whiteSpace: 'nowrap',
-        }
-
     };
 
     return (
@@ -89,14 +87,16 @@ function Biography() {
                     <Grid container spacing={3}>
                         <Grid item lg={4}>
                             <div style={styles.profileSection}>
-                                <div style={styles.paper}>
+                                <div>
                                     <Avatar alt="Hasan Mhd Amin photo"
                                             src={process.env.PUBLIC_URL + "/images/hasan.jpg"}
                                             style={styles.userAvatar}/>
 
                                     <div className={"fontStyle heading"} style={styles.profileName}>Hasan Mhd Amin</div>
-                                    <div className={"fontStyle subheading"} style={styles.profileExperience}>Android Application Developer <br/>
-                                        Full Stack Developer</div>
+                                    <div className={"fontStyle subheading"} style={styles.profileExperience}>Android
+                                        Application Developer <br/>
+                                        Full Stack Developer
+                                    </div>
                                     <EmailIcon color="primary" style={{fontSize: 50}}/>
                                     <LinkedInIcon color="primary" style={{fontSize: 50}}/>
                                     <GitHubIcon color="primary" style={{fontSize: 50}}/>
@@ -104,13 +104,14 @@ function Biography() {
 
                             </div>
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={8} style={styles.biography}>
                             <div className={"fontStyle"}>
 
                                 <h1 className={"fontStyle"}>Biography</h1>
-                                <p style={styles.biography}>
+                                <p>
 
-                                    I am a software engineer with a passion for computer science. I earned a Bachelor’s
+                                    I am a <b>software engineer</b> with a passion for computer science. I earned a
+                                    Bachelor’s
                                     degree in Informatics Engineering from Arab International University, and then a
                                     Master’s degree in Computer Engineering from the University of Duisburg-Essen.
                                     <br/>
