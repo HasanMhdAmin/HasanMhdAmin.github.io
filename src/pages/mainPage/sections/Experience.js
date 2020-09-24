@@ -10,6 +10,7 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
+import AOS from 'aos';
 
 import Paper from '@material-ui/core/Paper';
 
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Experience() {
+    AOS.init();
     const classes = useStyles();
 
     const styles = {
@@ -83,7 +85,10 @@ function Experience() {
                         <div className={"fontStyle"} style={styles.contentSection}>
 
                             <Timeline align="left">
-                                <TimelineItem>
+                                <TimelineItem
+                                    data-aos="fade-left"
+                                    data-aos-delay="200"
+                                    data-aos-duration="500">
                                     <TimelineOppositeContent style={styles.removeOppositeContent}/>
                                     <TimelineSeparator>
                                         <TimelineDot/>
@@ -126,7 +131,10 @@ function Experience() {
                                         </Paper>
                                     </TimelineContent>
                                 </TimelineItem>
-                                <TimelineItem>
+                                <TimelineItem
+                                    data-aos="fade-left"
+                                    data-aos-delay="200"
+                                    data-aos-duration="500">
                                     <TimelineOppositeContent style={styles.removeOppositeContent}/>
                                     <TimelineSeparator>
                                         <TimelineDot/>
@@ -171,7 +179,10 @@ function Experience() {
                                     </TimelineContent>
                                 </TimelineItem>
 
-                                <TimelineItem>
+                                <TimelineItem
+                                    data-aos="fade-left"
+                                    data-aos-delay="200"
+                                    data-aos-duration="500">
                                     <TimelineOppositeContent style={styles.removeOppositeContent}/>
                                     <TimelineSeparator>
                                         <TimelineDot/>

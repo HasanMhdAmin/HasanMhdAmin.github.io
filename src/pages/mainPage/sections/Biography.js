@@ -24,7 +24,7 @@ function Biography() {
         cvHeader: {
             paddingBottom: 50,
             paddingTop: 100,
-            backgroundColor: "#eeeeee"
+            // backgroundColor: "#eeeeee"
         },
         userAvatar: {
             margin: "auto",
