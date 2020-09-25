@@ -53,7 +53,7 @@ function Education() {
     };
 
     return (
-        <div style={styles.background}>
+        <div id="education" style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
                     <Grid item lg={4}>

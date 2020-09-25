@@ -11,6 +11,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import {Link} from 'react-scroll';
 
 function Biography() {
     const styles = {
@@ -55,7 +56,7 @@ function Biography() {
     };
 
     return (
-        <div>
+        <div id="home">
             <AppBar position="fixed" style={styles.appBar}>
                 <Container maxWidth="lg">
                     <Toolbar>
@@ -65,21 +66,31 @@ function Biography() {
 
                         <Box style={styles.topMenu}>
 
-                            <Button color="inherit">
-                                Home
-                            </Button>
-                            <Button color="inherit">
-                                Skills
-                            </Button>
-                            <Button color="inherit">
-                                Experience
-                            </Button>
-                            <Button color="inherit">
-                                Projects
-                            </Button>
-                            <Button color="inherit">
-                                Education
-                            </Button>
+                            <Link to="home" spy={true} smooth={true} duration={1000} offset={-50}>
+                                <Button color="inherit">
+                                    Home
+                                </Button>
+                            </Link>
+                            <Link to="skills" spy={true} smooth={true} duration={1000} offset={-50}>
+                                <Button color="inherit">
+                                    Skills
+                                </Button>
+                            </Link>
+                            <Link to="experience" spy={true} smooth={true} duration={1000} offset={-50}>
+                                <Button color="inherit">
+                                    Experience
+                                </Button>
+                            </Link>
+                            <Link to="projects" spy={true} smooth={true} duration={1000} offset={-50}>
+                                <Button color="inherit">
+                                    Projects
+                                </Button>
+                            </Link>
+                            <Link to="education" spy={true} smooth={true} duration={1000} offset={-50}>
+                                <Button color="inherit">
+                                    Education
+                                </Button>
+                            </Link>
                         </Box>
 
                     </Toolbar>

@@ -42,7 +42,7 @@ function Skills() {
     };
 
     return (
-        <div style={styles.background} className={"fontStyle"}>
+        <div id="skills" style={styles.background} className={"fontStyle"}>
             <Container maxWidth="lg">
                 <div className={"fontStyle"} style={styles.title}>
                     <h1 className={"subheading"}>Skills</h1>

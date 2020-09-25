@@ -73,7 +73,7 @@ function Projects() {
     };
 
     return (
-        <div style={styles.background}>
+        <div id="projects" style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
                     <Grid item lg={4}>
