@@ -15,7 +15,7 @@ function Education() {
         },
         background: {
             // paddingTop: 100,
-            backgroundColor: "#eeeeee"
+            // backgroundColor: "#eeeeee"
         },
         titleSection: {
             marginLeft: "auto",

@@ -54,7 +54,7 @@ function Skills() {
                           data-aos-delay="400"
                           data-aos-duration="1000">
                         <div style={styles.item}>
-                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/android.svg"}/>
+                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/android.svg"} alt={"Android icon"}/>
                             <h1 className={"subheading"}>Android</h1>
                         </div>
                     </Grid>
@@ -63,16 +63,16 @@ function Skills() {
                           data-aos-delay="800"
                           data-aos-duration="1000">
                         <div style={styles.item}>
-                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/frontend.svg"}/>
+                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/frontend.svg"} alt={"Full Stack icon"}/>
                             <h1 className={"subheading"}>Full Stack</h1>
                         </div>
                     </Grid>
                     <Grid item xs={12} lg={4}
-                          data-aos="fade-in"
+                          data-aos="fade-up"
                           data-aos-delay="1200"
                           data-aos-duration="1000">
                         <div style={styles.item}>
-                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/java.svg"}/>
+                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/java.svg"} alt={"Java icon"}/>
                             <h1 className={"subheading"}>Java</h1>
                         </div>
                     </Grid>

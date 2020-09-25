@@ -1,0 +1,319 @@
+[
+  {
+    "projectName": "News Diversity",
+    "shortDesc": "The topic of my master thesis is “Computing Diversity in News Sources”",
+    "HtmlDesc": "<p dir=\"ltr\" style=\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">The topic of my master thesis is &ldquo;Computing Diversity in News Sources&rdquo; it aims to detect the diversity of news fetched from news-source (e.g. BBC, Telegraph, Daily Mail, etc.) and to detect the news diversity globally.</span></p>\n<p dir=\"ltr\" style=\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">The main process is to fetch the articles from every news-source periodically, using the RSS feed and analyze the articles to detect the category of each article, extract keywords from the article and do NLP processing to analyze the text.</span></p>\n<p dir=\"ltr\" style=\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">What I offer to the end-user are a website, an Android application and a Chrome extension, they will show to the end-user some charts to visualize how the news are diverse around the world.</span></p>\n<p><br></p>\n<ul style=\"margin-top:0;margin-bottom:0;\">\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Analyze the project: drawing use-case and ERD, classes design.</span></p>\n    </li>\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Database design and implementation.</span></p>\n    </li>\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Implementing the backend using Spring boot (Java / Kotlin / Vaadin).</span></p>\n    </li>\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:12pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Create an Android application (basically a browser with an additional feature that will visualize to the user some information about the article and the domain that he/she reads from).</span></p>\n    </li>\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:12pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Implement a website using ReactJS.</span></p>\n    </li>\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:12pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Implement a Chrome extension displays the same data as the Android app.</span></p>\n    </li>\n    <li dir=\"ltr\" style=\"list-style-type:disc;font-size:12pt;font-family:'Noto Sans Symbols',sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\">\n        <p dir=\"ltr\" style=\"line-height:1.3800000000000001;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">The data presented by the App and Chrome extension are: Source Popularity, Article Popularity, Ease of Reading, Sentiment, Objectivity, Political Bias, News Diversity, Category.</span><br><br></p>\n    </li>\n</ul>\n<p dir=\"ltr\" style=\"line-height:1.2;text-align: justify;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">[</span><a href=\"http://hasanmhdamin.github.io/news-diversity/\" style=\"text-decoration:none;\"><span style=\"font-size:12pt;font-family:Arial;color:#0000ff;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Preview Link</span></a><span style=\"font-size:12pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">]</span></p>",
+    "company": "Master Thesis at University of Duisburg-Essen, Germany",
+    "companyUrl": "-",
+    "platforms": [
+      "Android",
+      "Front-end",
+      "Back-end",
+      "Chrome Extension"
+    ],
+    "duration": "04/2020 - 09/2020",
+    "tags": [
+      "Spring Boot",
+      "ReactJS",
+      "Restful API",
+      "Java",
+      "Kotlin",
+      "Hibernate",
+      "JPA",
+      "RSS feed",
+      "MySQL",
+      "Android Studio",
+      "Intellij IDEA"
+    ],
+    "filters": [
+      "all",
+      "personal",
+      "mobile",
+      "web"
+    ],
+    "heroImage": "news-diversity.png",
+    "images": []
+  },
+  {
+    "projectName": "Cordova & Ionic plugins",
+    "shortDesc": "Plugins to wrap the native PhotoEditor SDK and VideoEditor SDK",
+    "HtmlDesc": "",
+    "company": "img.ly GmbH, Bochum",
+    "companyUrl": "-",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Cordova",
+      "Ionic"
+    ],
+    "duration": "05/2020 - 09/2020",
+    "tags": [
+      "Android",
+      "iOS",
+      "Cordova",
+      "Ionic",
+      "Java",
+      "Kotlin",
+      "Android Studio",
+      "Visual Studio Code",
+      "NPM"
+    ],
+    "filters": [
+      "all",
+      "professional",
+      "mobile"
+    ],
+    "heroImage": "cordova-wrapper.jpg",
+    "images": []
+  },
+  {
+    "projectName": "PAX",
+    "shortDesc": "A health recommender system app for mental health promotion",
+    "HtmlDesc": "",
+    "company": "Interactive Systems Group, Duisburg",
+    "companyUrl": "-",
+    "platforms": [
+      "Android",
+      "Back-end"
+    ],
+    "duration": "01/2019 - 09/2020",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "JSON",
+      "Android Studio",
+      "ContentResolver",
+      "ActivityRecognitionClient",
+      "AlarmManager",
+      "AccessibilityService",
+      "Fabric",
+      "Firebase",
+      "ActiveAndroid",
+      "Git",
+      "Postman",
+      "Runtime permissions",
+      "MySQL"
+    ],
+    "filters": [
+      "all",
+      "professional",
+      "mobile"
+    ],
+    "heroImage": "pax.png",
+    "images": []
+  },
+  {
+    "projectName": "PAX Mood Tracker",
+    "shortDesc": "An android mood tracker for comparing various mood measures",
+    "HtmlDesc": "",
+    "company": "Interactive Systems Group, Duisburg",
+    "companyUrl": "-",
+    "platforms": [
+      "Android",
+      "Back-end"
+    ],
+    "duration": "08/2018 - 01/2019",
+    "tags": [
+      "Java",
+      "Kotlin",
+      "JSON",
+      "Android Studio",
+      "Fabric",
+      "ActiveAndroid",
+      "Git",
+      "Postman",
+      "PHP"
+    ],
+    "filters": [
+      "all",
+      "professional",
+      "mobile"
+    ],
+    "heroImage": "mood-tracker.png",
+    "images": []
+  },
+  {
+    "projectName": "RTA Dubai",
+    "shortDesc": "An application for \"Roads and Transport Authority\" for Dubai E-Government",
+    "HtmlDesc": "",
+    "company": "CloudAppers, Damascus",
+    "companyUrl": "-",
+    "platforms": [
+      "Android"
+    ],
+    "duration": "12/2016 – 07/2017",
+    "tags": [
+      "Java",
+      "JSON",
+      "XML",
+      "Android Studio",
+      "Fabric",
+      "Google Maps",
+      "Firebase",
+      "Git",
+      "AppPulse"
+    ],
+    "filters": [
+      "all",
+      "professional",
+      "mobile"
+    ],
+    "heroImage": "rta.jpg",
+    "images": []
+  },
+  {
+    "projectName": "Visit Abu Dhabi",
+    "shortDesc": "An application that shows POIs in Abu Dhabi.",
+    "HtmlDesc": "",
+    "company": "CloudAppers, Damascus",
+    "companyUrl": "-",
+    "platforms": [
+      "Android"
+    ],
+    "duration": "12/2016 – 07/2017",
+    "tags": [
+      "Java",
+      "JSON",
+      "XML",
+      "Android Studio",
+      "Fabric",
+      "ArcGIS Maps",
+      "Firebase",
+      "Git"
+    ],
+    "filters": [
+      "all",
+      "professional",
+      "mobile"
+    ],
+    "heroImage": "vad.png",
+    "images": []
+  },
+  {
+    "projectName": "CloudParking",
+    "shortDesc": "Allow the co-workers in a company to rent their parking to other co-workers",
+    "HtmlDesc": "",
+    "company": "Personal Project",
+    "companyUrl": "",
+    "platforms": [
+      "Android",
+      "Front-end",
+      "Back-end"
+    ],
+    "duration": "",
+    "tags": [
+      "MS SQL Server",
+      "MS Management Studio",
+      "Android Studio",
+      "Java",
+      "C#",
+      "Entity Framework",
+      "ReactJS",
+      "Material Design",
+      "Firebase",
+      "Fabric",
+      "JSON",
+      "Postman",
+      "Git"
+    ],
+    "filters": [
+      "all",
+      "personal",
+      "mobile",
+      "web"
+    ],
+    "heroImage": "cloudparking.png",
+    "images": []
+  },
+  {
+    "projectName": "SyriaAd",
+    "shortDesc": "Allow the users to share their advertisements and search for products or services",
+    "HtmlDesc": "",
+    "company": "Personal Project",
+    "companyUrl": "",
+    "platforms": [
+      "Android",
+      "Back-end"
+    ],
+    "duration": "",
+    "tags": [
+      "MS SQL Server",
+      "MS Management Studio",
+      "Android Studio",
+      "Java",
+      "C#",
+      "Entity Framework",
+      "Lucene.Net",
+      "Fabric",
+      "JSON",
+      "Postman",
+      "PubNub(real-time messages)",
+      "Facebook SDK",
+      "Git"
+    ],
+    "filters": [
+      "all",
+      "personal",
+      "mobile"
+    ],
+    "heroImage": "syria-ad.png",
+    "images": []
+  },
+  {
+    "projectName": "Smart Learning",
+    "shortDesc": "Help students to access learning resources in a more straightforward matter",
+    "HtmlDesc": "",
+    "company": "Personal Project",
+    "companyUrl": "",
+    "platforms": [
+      "Front-end",
+      "Back-end"
+    ],
+    "duration": "",
+    "tags": [
+      "ReactJS",
+      "Node JS Express",
+      "MongoDB",
+      "JSON",
+      "Postman",
+      "Mercury reader",
+      "Git"
+    ],
+    "filters": [
+      "all",
+      "personal",
+      "web"
+    ],
+    "heroImage": "smart-learning.png",
+    "images": []
+  },
+  {
+    "projectName": "Tarani.me",
+    "shortDesc": "Receiving honest constructive anonymous feedback from your employees and your friends.",
+    "HtmlDesc": "",
+    "company": "Personal Project",
+    "companyUrl": "",
+    "platforms": [
+      "Front-end",
+      "Back-end"
+    ],
+    "duration": "",
+    "tags": [
+      "ReactJS",
+      "ASP.Net",
+      "C#",
+      "Entity Framework",
+      "MSSQL",
+      "JSON",
+      "Postman",
+      "Git"
+    ],
+    "filters": [
+      "all",
+      "personal",
+      "web"
+    ],
+    "heroImage": "tarani.png",
+    "images": []
+  }
+]

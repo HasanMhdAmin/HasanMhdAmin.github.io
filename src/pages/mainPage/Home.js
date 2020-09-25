@@ -4,6 +4,7 @@ import Biography from "./sections/Biography";
 import Education from "./sections/Education";
 import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
             <Biography/>
             <Skills/>
             <Experience/>
+            <Projects/>
             <Education/>
         </div>
 
