@@ -72,7 +72,13 @@ function Biography() {
                                 Skills
                             </Button>
                             <Button color="inherit">
+                                Experience
+                            </Button>
+                            <Button color="inherit">
                                 Projects
+                            </Button>
+                            <Button color="inherit">
+                                Education
                             </Button>
                         </Box>
 
