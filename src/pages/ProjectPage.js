@@ -6,7 +6,6 @@ import {useParams} from 'react-router-dom'
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@material-ui/core/Box";
-import {Link} from "react-scroll";
 import Button from "@material-ui/core/Button";
 
 function ProjectPage() {
@@ -16,6 +15,14 @@ function ProjectPage() {
 
 
     const styles = {
+        name: {
+            fontWeight: "bold",
+            fontSize: 30,
+            cursor: "pointer",
+        },
+        topMenu: {
+            marginLeft: 30
+        },
         projectContent: {
             marginTop: 100
         },
@@ -35,6 +42,9 @@ function ProjectPage() {
         },
         desc: {
             fontSize: 18,
+        },
+        platformsContainer: {
+            marginTop: 10,
         },
         tagsContainer: {
             marginBottom: 100,
@@ -61,37 +71,45 @@ function ProjectPage() {
             <AppBar position="fixed" style={styles.appBar}>
                 <Container maxWidth="lg">
                     <Toolbar>
-                        <Box style={styles.name}>
+                        <Box style={styles.name} onClick={() => {
+                            let url = window.location.protocol + "//" + window.location.host;
+                            window.location.replace(url);
+                        }}>
                             Hasan Mhd Amin
                         </Box>
 
                         <Box style={styles.topMenu}>
 
-                            <Link to="home" spy={true} smooth={true} duration={1000} offset={-50}>
-                                <Button color="inherit">
-                                    Home
-                                </Button>
-                            </Link>
-                            <Link to="skills" spy={true} smooth={true} duration={1000} offset={-50}>
-                                <Button color="inherit">
-                                    Skills
-                                </Button>
-                            </Link>
-                            <Link to="experience" spy={true} smooth={true} duration={1000} offset={-50}>
-                                <Button color="inherit">
-                                    Experience
-                                </Button>
-                            </Link>
-                            <Link to="projects" spy={true} smooth={true} duration={1000} offset={-50}>
-                                <Button color="inherit">
-                                    Projects
-                                </Button>
-                            </Link>
-                            <Link to="education" spy={true} smooth={true} duration={1000} offset={-50}>
-                                <Button color="inherit">
-                                    Education
-                                </Button>
-                            </Link>
+                            <Button color="inherit" onClick={() => {
+                                let url = window.location.protocol + "//" + window.location.host;
+                                window.location.replace(url);
+                            }}>
+                                Home
+                            </Button>
+                            <Button color="inherit" onClick={() => {
+                                let url = window.location.protocol + "//" + window.location.host + "#skills";
+                                window.location.replace(url);
+                            }}>
+                                Skills
+                            </Button>
+                            <Button color="inherit" onClick={() => {
+                                let url = window.location.protocol + "//" + window.location.host + "#experience";
+                                window.location.replace(url);
+                            }}>
+                                Experience
+                            </Button>
+                            <Button color="inherit" onClick={() => {
+                                let url = window.location.protocol + "//" + window.location.host + "#projects";
+                                window.location.replace(url);
+                            }}>
+                                Projects
+                            </Button>
+                            <Button color="inherit" onClick={() => {
+                                let url = window.location.protocol + "//" + window.location.host + "#education";
+                                window.location.replace(url);
+                            }}>
+                                Education
+                            </Button>
                         </Box>
 
                     </Toolbar>
@@ -112,6 +130,21 @@ function ProjectPage() {
                     <div>{getProject.duration}</div>
                 </a>
 
+
+                <div style={styles.platformsContainer}>
+
+                    <div style={styles.tagsTitle}>
+                        Platforms:
+                    </div>
+                    {getProject.platforms.map(tag => (
+
+                        <Button style={styles.tags} variant="contained" disabled>
+                            {tag}
+                        </Button>
+
+                    ))}
+
+                </div>
 
                 <div style={styles.desc} dangerouslySetInnerHTML={{__html: getProject.HtmlDesc}}/>
 

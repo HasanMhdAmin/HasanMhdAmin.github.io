@@ -107,7 +107,10 @@ function Projects() {
                                     // data-aos-duration="1000"
                                 >
                                     <Card style={styles.card}>
-                                        <CardActionArea>
+                                        <CardActionArea onClick={event => {
+                                            let url = window.location.protocol + "//" + window.location.host + "" + "/project/" + project.projectName;
+                                            window.location.replace(url);
+                                        }}>
                                             <CardMedia
                                                 style={styles.media}
                                                 image={process.env.PUBLIC_URL + "/images/projects/" + project.heroImage}

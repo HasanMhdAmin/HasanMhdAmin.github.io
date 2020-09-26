@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {createMuiTheme, MuiThemeProvider} from "@material-ui/core";
-import { HashRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
 import Home from "./pages/mainPage/Home";
 import ProjectPage from "./pages/ProjectPage";
 
@@ -15,15 +15,29 @@ function App() {
         typography: {useNextVariants: true},
     });
 
+    function hashLinkScroll() {
+        const { hash } = window.location;
+        if (hash !== '') {
+            // Push onto callback queue so it runs after the DOM is updated,
+            // this is required when navigating from a different page so that
+            // the element is rendered on the page before trying to getElementById.
+            setTimeout(() => {
+                const id = hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) element.scrollIntoView();
+            }, 0);
+        }
+    }
+
     return (
       <div >
         <MuiThemeProvider theme={theme}>
-          <HashRouter>
+          <BrowserRouter>
             <Switch>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/" component={Home} onUpdate={hashLinkScroll}/>
               <Route exact path="/project/:name" component={ProjectPage}/>
             </Switch>
-          </HashRouter>
+          </BrowserRouter>
         </MuiThemeProvider>
       </div>
     // <div className="App">

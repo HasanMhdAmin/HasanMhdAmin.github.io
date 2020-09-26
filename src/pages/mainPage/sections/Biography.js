@@ -18,6 +18,7 @@ function Biography() {
         name: {
             fontWeight: "bold",
             fontSize: 30,
+            cursor: "pointer",
         },
         topMenu: {
             marginLeft: 30
@@ -56,7 +57,7 @@ function Biography() {
     };
 
     return (
-        <div id="home">
+        <div id="home" className={"fontStyle"}>
             <AppBar position="fixed" style={styles.appBar}>
                 <Container maxWidth="lg">
                     <Toolbar>
