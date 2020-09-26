@@ -32,7 +32,7 @@ function App() {
     return (
       <div >
         <MuiThemeProvider theme={theme}>
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
               <Route exact path="/" component={Home} onUpdate={hashLinkScroll}/>
               <Route exact path="/project/:name" component={ProjectPage}/>
