@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hasan-cv/static/css/main.56d3355c.chunk.css",
+    "main.js": "/hasan-cv/static/js/main.23c6bc96.chunk.js",
+    "main.js.map": "/hasan-cv/static/js/main.23c6bc96.chunk.js.map",
+    "runtime-main.js": "/hasan-cv/static/js/runtime-main.d77f5452.js",
+    "runtime-main.js.map": "/hasan-cv/static/js/runtime-main.d77f5452.js.map",
+    "static/js/2.0a208dfd.chunk.js": "/hasan-cv/static/js/2.0a208dfd.chunk.js",
+    "static/js/2.0a208dfd.chunk.js.map": "/hasan-cv/static/js/2.0a208dfd.chunk.js.map",
+    "index.html": "/hasan-cv/index.html",
+    "precache-manifest.0f50f06c647a22663ffa9ce1e156a8a4.js": "/hasan-cv/precache-manifest.0f50f06c647a22663ffa9ce1e156a8a4.js",
+    "service-worker.js": "/hasan-cv/service-worker.js",
+    "static/css/main.56d3355c.chunk.css.map": "/hasan-cv/static/css/main.56d3355c.chunk.css.map",
+    "static/js/2.0a208dfd.chunk.js.LICENSE.txt": "/hasan-cv/static/js/2.0a208dfd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d77f5452.js",
+    "static/js/2.0a208dfd.chunk.js",
+    "static/css/main.56d3355c.chunk.css",
+    "static/js/main.23c6bc96.chunk.js"
+  ]
+}
