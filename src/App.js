@@ -3,6 +3,7 @@ import './App.css';
 import {createMuiTheme, MuiThemeProvider} from "@material-ui/core";
 import { HashRouter, Route, Switch} from "react-router-dom";
 import Home from "./pages/mainPage/Home";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
     const theme = createMuiTheme({
@@ -20,6 +21,7 @@ function App() {
           <HashRouter>
             <Switch>
               <Route exact path="/" component={Home}/>
+              <Route exact path="/project/:name" component={ProjectPage}/>
             </Switch>
           </HashRouter>
         </MuiThemeProvider>

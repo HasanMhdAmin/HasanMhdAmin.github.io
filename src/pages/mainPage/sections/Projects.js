@@ -58,13 +58,6 @@ function Projects() {
         }
     };
 
-    const data = [
-        {quarter: 1, earnings: 13000},
-        {quarter: 2, earnings: 16500},
-        {quarter: 3, earnings: 14250},
-        {quarter: 4, earnings: 19000}
-    ]
-
     const onAll = () => {
         setFilterValue("all")
     };
@@ -108,7 +101,7 @@ function Projects() {
                         >
 
                             {projectsDate.filter(pr => pr.filters.includes(filterValue)).map(project => (
-                                <Grid item xs={12} sm={6} md={4} key={data.indexOf(project)}
+                                <Grid item xs={12} sm={6} md={4} key={projectsDate.indexOf(project)}
                                     // data-aos="zoom-in"
                                     // data-aos-delay="400"
                                     // data-aos-duration="1000"
