@@ -9,6 +9,21 @@
   font-weight: 300;
 }
 
+
+.footer {
+  z-index: -101;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background: #eeeeee;
+  text-align: center;
+}
+
+.footerContent {
+  /*position: relative;*/
+  /*top: 23%;*/
+}
+
 .App {
   text-align: center;
 }

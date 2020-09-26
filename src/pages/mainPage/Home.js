@@ -5,6 +5,7 @@ import Education from "./sections/Education";
 import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
             <Experience/>
             <Projects/>
             <Education/>
+            <Contact/>
         </div>
 
     );

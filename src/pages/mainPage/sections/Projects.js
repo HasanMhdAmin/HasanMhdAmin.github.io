@@ -33,6 +33,7 @@ function Projects() {
         contentSection: {
             marginTop: 50,
             paddingLeft: 40,
+            paddingBottom: 50,
         },
         projectsSection: {
             marginTop: 20,

@@ -30,7 +30,9 @@ function Experience() {
     const classes = useStyles();
 
     const styles = {
-
+        background: {
+            backgroundColor: "#ffffff",
+        },
         titleSection: {
             marginLeft: "auto",
             marginRight: "auto",
@@ -68,7 +70,7 @@ function Experience() {
     };
 
     return (
-        <div id="experience">
+        <div id="experience" style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
                     <Grid item lg={4}>
