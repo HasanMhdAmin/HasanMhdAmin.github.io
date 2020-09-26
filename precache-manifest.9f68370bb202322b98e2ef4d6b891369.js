@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49e0ad8121038db4773bd0b719d18461",
+    "revision": "e7798ed3cc105dfb2416ecad8cc8e800",
     "url": "/hasan-cv/index.html"
   },
   {
-    "revision": "8a129e708e33ddfbedee",
+    "revision": "cb5b8caa73efddb01496",
     "url": "/hasan-cv/static/css/main.56d3355c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hasan-cv/static/js/2.0a208dfd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a129e708e33ddfbedee",
-    "url": "/hasan-cv/static/js/main.23c6bc96.chunk.js"
+    "revision": "cb5b8caa73efddb01496",
+    "url": "/hasan-cv/static/js/main.80d6fae6.chunk.js"
   },
   {
     "revision": "371457efa135c0c1df9c",
