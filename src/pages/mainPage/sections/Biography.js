@@ -129,9 +129,15 @@ function Biography() {
                                         Application Developer <br/>
                                         Full Stack Developer
                                     </div>
-                                    <EmailIcon color="primary" style={{fontSize: 50}}/>
-                                    <LinkedInIcon color="primary" style={{fontSize: 50}}/>
-                                    <GitHubIcon color="primary" style={{fontSize: 50}}/>
+                                    <a href="mailto:hasan.mhd.amin@gmail.com" target="_blank">
+                                        <EmailIcon color="primary" style={{fontSize: 50}}/>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/hasanmhdamin/" target="_blank">
+                                        <LinkedInIcon color="primary" style={{fontSize: 50}}/>
+                                    </a>
+                                    <a href="https://github.com/hasanMhdAmin" target="_blank">
+                                        <GitHubIcon color="primary" style={{fontSize: 50}}/>
+                                    </a>
                                 </div>
 
                             </div>
@@ -159,7 +165,8 @@ function Biography() {
                                 </p>
                             </div>
 
-                            <a style={styles.cvLink} href="https://drive.google.com/file/d/1bZ58TLDK1huV5yzux8ezFMaICn7YO5t5/view"
+                            <a style={styles.cvLink}
+                               href="https://drive.google.com/file/d/1bZ58TLDK1huV5yzux8ezFMaICn7YO5t5/view"
                                target="_blank">
                                 <Button
                                     variant="contained"

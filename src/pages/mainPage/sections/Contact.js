@@ -87,8 +87,7 @@ function Contact() {
 
 
                         <div style={styles.footer}>
-                            crafted with ❤️ by <a style={styles.hasanName} href="https://itshasan.de">Hasan Mhd
-                            Amin</a> using <a style={styles.hasanName} href="https://reactjs.org/"
+                            Developed️ by <a style={styles.hasanName} href="https://itshasan.de">me</a> using <a style={styles.hasanName} href="https://reactjs.org/"
                                               target="_blank">ReactJs</a>
                         </div>
 
