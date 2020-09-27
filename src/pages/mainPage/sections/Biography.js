@@ -51,6 +51,9 @@ function Biography() {
             fontSize: 18,
             paddingLeft: 60,
         },
+        cvLink: {
+            textDecoration: "none",
+        },
         detailedCV: {
             marginLeft: 18
         },
@@ -156,24 +159,17 @@ function Biography() {
                                 </p>
                             </div>
 
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                size="large"
-                                startIcon={<GetAppIcon/>}
-                            >
-                                Download C.V.
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                color="primary"
-                                size="large"
-                                startIcon={<GetAppIcon/>}
-                                style={styles.detailedCV}
-                            >
-                                Download detailed C.V.
-                            </Button>
+                            <a style={styles.cvLink} href="https://drive.google.com/file/d/1bZ58TLDK1huV5yzux8ezFMaICn7YO5t5/view"
+                               target="_blank">
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    size="large"
+                                    startIcon={<GetAppIcon/>}
+                                >
+                                    Download C.V.
+                                </Button>
+                            </a>
 
                         </Grid>
                     </Grid>
