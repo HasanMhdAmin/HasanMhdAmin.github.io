@@ -109,7 +109,7 @@ function Projects() {
                                 >
                                     <Card style={styles.card}>
                                         <CardActionArea onClick={event => {
-                                            let url = window.location.protocol + "//" + window.location.host + "" + "/project/" + project.projectName;
+                                            let url = window.location.protocol + "//" + window.location.host + "#" + "/project/" + project.projectName;
                                             window.location.replace(url);
                                         }}>
                                             <CardMedia

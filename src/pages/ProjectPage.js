@@ -13,6 +13,9 @@ function ProjectPage() {
     const projectsDate = ProjectsData
     let {name} = useParams();
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0) // scroll to top when loading the page
+    }, []);
 
     const styles = {
         name: {
@@ -87,28 +90,40 @@ function ProjectPage() {
                                 Home
                             </Button>
                             <Button color="inherit" onClick={() => {
-                                let url = window.location.protocol + "//" + window.location.host + "#skills";
+                                let url = window.location.protocol + "//" + window.location.host + "#/home/skills";
                                 window.location.replace(url);
                             }}>
                                 Skills
                             </Button>
                             <Button color="inherit" onClick={() => {
-                                let url = window.location.protocol + "//" + window.location.host + "#experience";
+                                let url = window.location.protocol + "//" + window.location.host + "#/home/experience";
                                 window.location.replace(url);
                             }}>
                                 Experience
                             </Button>
                             <Button color="inherit" onClick={() => {
-                                let url = window.location.protocol + "//" + window.location.host + "#projects";
+                                let url = window.location.protocol + "//" + window.location.host + "#/home/projects";
                                 window.location.replace(url);
                             }}>
                                 Projects
                             </Button>
                             <Button color="inherit" onClick={() => {
-                                let url = window.location.protocol + "//" + window.location.host + "#education";
+                                let url = window.location.protocol + "//" + window.location.host + "#/home/education";
                                 window.location.replace(url);
                             }}>
                                 Education
+                            </Button>
+                            <Button color="inherit" onClick={() => {
+                                let url = window.location.protocol + "//" + window.location.host + "#/home/contact";
+                                window.location.replace(url);
+                                setTimeout(() => {
+                                    window.scrollTo({
+                                        behavior: document.body.scrollHeight ? "smooth" : "auto",
+                                        top: document.body.scrollHeight
+                                    });
+                                }, 1000);
+                            }}>
+                                Contact
                             </Button>
                         </Box>
 

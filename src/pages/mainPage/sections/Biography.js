@@ -61,7 +61,10 @@ function Biography() {
             <AppBar position="fixed" style={styles.appBar}>
                 <Container maxWidth="lg">
                     <Toolbar>
-                        <Box style={styles.name}>
+                        <Box style={styles.name} onClick={() => {
+                            let url = window.location.protocol + "//" + window.location.host;
+                            window.location.replace(url);
+                        }}>
                             Hasan Mhd Amin
                         </Box>
 
@@ -92,6 +95,14 @@ function Biography() {
                                     Education
                                 </Button>
                             </Link>
+                            <Button color="inherit" onClick={() => {
+                                window.scrollTo({
+                                    behavior: document.body.scrollHeight ? "smooth" : "auto",
+                                    top: document.body.scrollHeight
+                                });
+                            }}>
+                                Contact
+                            </Button>
                         </Box>
 
                     </Toolbar>
