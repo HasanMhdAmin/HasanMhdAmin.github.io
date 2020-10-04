@@ -12,8 +12,11 @@ import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import {Link} from 'react-scroll';
+import MobileAppBar from "../../MobileAppBar";
+
 
 function Biography() {
+
     const styles = {
         name: {
             fontWeight: "bold",
@@ -22,6 +25,9 @@ function Biography() {
         },
         topMenu: {
             marginLeft: 30
+        },
+        hamburger: {
+            marginRight: 10,
         },
         cvHeader: {
             paddingBottom: 50,
@@ -49,7 +55,6 @@ function Biography() {
         },
         biography: {
             fontSize: 18,
-            paddingLeft: 60,
         },
         cvLink: {
             textDecoration: "none",
@@ -61,9 +66,12 @@ function Biography() {
 
     return (
         <div id="home" className={"fontStyle"}>
-            <AppBar position="fixed" style={styles.appBar}>
+            <AppBar position="fixed"
+
+            >
                 <Container maxWidth="lg">
-                    <Toolbar>
+                    <Toolbar
+                        id="landscapeFlex">
                         <Box style={styles.name} onClick={() => {
                             let url = window.location.protocol + "//" + window.location.host;
                             window.location.replace(url);
@@ -110,14 +118,14 @@ function Biography() {
 
                     </Toolbar>
                 </Container>
-
             </AppBar>
 
+            <MobileAppBar/>
 
             <header style={styles.cvHeader}>
                 <Container maxWidth="lg">
                     <Grid container spacing={3}>
-                        <Grid item lg={4}>
+                        <Grid item sm={4} xs={12}>
                             <div style={styles.profileSection}>
                                 <div>
                                     <Avatar alt="Hasan Mhd Amin photo"
@@ -142,7 +150,7 @@ function Biography() {
 
                             </div>
                         </Grid>
-                        <Grid item xs={8} style={styles.biography}>
+                        <Grid item sm={8} xs={12} style={styles.biography}>
                             <div className={"fontStyle"}>
 
                                 <h1 className={"fontStyle"}>Biography</h1>

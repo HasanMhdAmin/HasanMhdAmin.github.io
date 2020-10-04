@@ -12,6 +12,7 @@ function Skills() {
         background: {
             paddingTop: 70,
             backgroundColor: "#eeeeee",
+            paddingBottom: 50,
         },
         title: {
             marginLeft: "auto",
@@ -34,7 +35,7 @@ function Skills() {
             minHeight: 170
         },
         sectionWrapper: {
-            paddingBottom: 70,
+            // paddingBottom: 70,
         },
         responsibilities: {
             fontSize: 18,
@@ -49,7 +50,7 @@ function Skills() {
                 </div>
 
                 <Grid container spacing={3}>
-                    <Grid item xs={12} lg={4}
+                    <Grid item md={4} xs={12}
                           data-aos="fade-up"
                           data-aos-delay="400"
                           data-aos-duration="1000">
@@ -58,7 +59,7 @@ function Skills() {
                             <h1 className={"subheading"}>Android</h1>
                         </div>
                     </Grid>
-                    <Grid item xs={12} lg={4}
+                    <Grid item md={4} xs={12}
                           data-aos="fade-up"
                           data-aos-delay="800"
                           data-aos-duration="1000">
@@ -67,7 +68,7 @@ function Skills() {
                             <h1 className={"subheading"}>Full Stack</h1>
                         </div>
                     </Grid>
-                    <Grid item xs={12} lg={4}
+                    <Grid item md={4} xs={12}
                           data-aos="fade-up"
                           data-aos-delay="1200"
                           data-aos-duration="1000">
@@ -79,7 +80,7 @@ function Skills() {
                 </Grid>
 
                 <Grid container spacing={3}>
-                    <Grid item xs={12} lg={6}
+                    <Grid item md={6} xs={12}
                           data-aos="fade-up"
                           data-aos-delay="400"
                           data-aos-duration="1000">
@@ -91,7 +92,7 @@ function Skills() {
                             </div>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} lg={6}
+                    <Grid item md={6} xs={12}
                           data-aos="fade-up"
                           data-aos-delay="600"
                           data-aos-duration="1000">
@@ -102,7 +103,7 @@ function Skills() {
                             </div>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} lg={6} style={styles.sectionWrapper}
+                    <Grid item md={6} xs={12}  style={styles.sectionWrapper}
                           data-aos="fade-up"
                           data-aos-delay="400"
                           data-aos-duration="1000">
@@ -114,7 +115,7 @@ function Skills() {
                             </div>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} lg={6}
+                    <Grid item md={6} xs={12}
                           data-aos="fade-up"
                           data-aos-delay="600"
                           data-aos-duration="1000">

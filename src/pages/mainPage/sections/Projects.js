@@ -2,8 +2,6 @@ import React from 'react';
 import '../../../App.css';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -11,16 +9,50 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import ProjectsData from '../../../projectsResource/projects';
 import AOS from 'aos';
+import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
+import {makeStyles} from "@material-ui/core/styles";
+import {withStyles} from "@material-ui/core";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import Paper from "@material-ui/core/Paper";
+import ToggleButton from "@material-ui/lab/ToggleButton";
+
+
+const useStyles = makeStyles((theme) => ({
+
+    divider: {
+        margin: theme.spacing(1, 0.5),
+    },
+    overflow: "auto",
+    whiteSpace: "nowrap",
+}));
+
+const StyledToggleButtonGroup = withStyles((theme) => ({
+    grouped: {
+        margin: theme.spacing(0.5),
+        background: "#ffffff",
+        border: 'none',
+        '&:not(:first-child)': {
+            borderRadius: theme.shape.borderRadius,
+        },
+        '&:first-child': {
+            borderRadius: theme.shape.borderRadius,
+        },
+    },
+}))(ToggleButtonGroup);
 
 function Projects() {
     AOS.init();
-
+    const classes = useStyles();
     const [filterValue, setFilterValue] = React.useState("all");
 
     const projectsDate = ProjectsData
     const styles = {
         background: {
             backgroundColor: "#eeeeee",
+            paddingBottom: 50,
         },
         titleSection: {
             marginLeft: "auto",
@@ -32,18 +64,19 @@ function Projects() {
         },
         contentSection: {
             marginTop: 50,
-            paddingLeft: 40,
-            paddingBottom: 50,
+            // paddingBottom: 50,
         },
         projectsSection: {
             marginTop: 20,
-            // paddingLeft: 40,
         },
-        card: {
-            maxWidth: 245,
-        },
+        card: {},
         media: {
             height: 140,
+        },
+        paper: {
+            display: "inline-block",
+            border: `none`,
+            flexWrap: 'wrap',
         },
         title: {
             fontSize: 21
@@ -56,21 +89,26 @@ function Projects() {
         },
         cardIcon: {
             maxWidth: 25
+        },
+        mobileFix: {
+            marginTop: "0px !important"
         }
     };
 
-    const onAll = () => {
-        setFilterValue("all")
+    const handleCategoryChange = (event, newAlignment) => {
+        setFilterValue(newAlignment);
     };
-    const onProfessional = () => {
-        setFilterValue("professional")
+
+    const handleChange = (event) => {
+        setFilterValue(event.target.value);
     };
+
 
     return (
         <div id="projects" style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
-                    <Grid item lg={4}>
+                    <Grid item md={4}>
 
                         <div className={"fontStyle"}
                              style={styles.titleSection}>
@@ -79,17 +117,57 @@ function Projects() {
 
                         </div>
                     </Grid>
-                    <Grid item xs={8} style={styles.contentSection}>
+                    <Grid item md={8} xs={12}
+                          // style={styles.contentSection}
+                    >
                         <div className={"fontStyle"}>
 
-                            <ButtonGroup variant="contained" color="primary"
-                                         aria-label="contained primary button group">
-                                <Button onClick={onAll}>All</Button>
-                                <Button onClick={onProfessional}>Professional</Button>
-                                <Button onClick={() => setFilterValue("personal")}>Personal</Button>
-                                <Button onClick={() => setFilterValue("mobile")}>Mobile</Button>
-                                <Button onClick={() => setFilterValue("web")}>Web</Button>
-                            </ButtonGroup>
+                            <Paper
+                                id={"landscape"}
+                                // style={styles.paper}
+                                style={Object.assign(styles.paper, styles.contentSection)}>
+
+                                <StyledToggleButtonGroup
+                                    value={filterValue}
+                                    exclusive
+                                    onChange={handleCategoryChange}
+                                    aria-label="text alignment"
+                                >
+                                    <ToggleButton value="all" aria-label="centered">
+                                        All
+                                    </ToggleButton>
+                                    <ToggleButton value="professional" aria-label="centered">
+                                        Professional
+                                    </ToggleButton>
+                                    <ToggleButton value="personal" aria-label="centered">
+                                        Personal
+                                    </ToggleButton>
+                                    <ToggleButton value="mobile" aria-label="centered">
+                                        Mobile
+                                    </ToggleButton>
+                                    <ToggleButton value="web" aria-label="centered">
+                                        Web
+                                    </ToggleButton>
+                                </StyledToggleButtonGroup>
+                            </Paper>
+
+                            <FormControl style={styles.mobileFix}
+                                         id="mobile"
+                                         variant="outlined">
+                                <InputLabel id="demo-simple-select-outlined-label">Category</InputLabel>
+                                <Select
+                                    value={filterValue}
+                                    onChange={handleChange}
+                                    label="Category"
+                                >
+                                    <MenuItem value="all">All</MenuItem>
+                                    <MenuItem value="professional">Professional</MenuItem>
+                                    <MenuItem value="personal">Personal</MenuItem>
+                                    <MenuItem value="mobile">Mobile</MenuItem>
+                                    <MenuItem value="web">Web</MenuItem>
+                                </Select>
+                            </FormControl>
+
                         </div>
 
                         <Grid
@@ -102,11 +180,7 @@ function Projects() {
                         >
 
                             {projectsDate.filter(pr => pr.filters.includes(filterValue)).map(project => (
-                                <Grid item xs={12} sm={6} md={4} key={projectsDate.indexOf(project)}
-                                    // data-aos="zoom-in"
-                                    // data-aos-delay="400"
-                                    // data-aos-duration="1000"
-                                >
+                                <Grid item xs={12} sm={6} md={4} key={projectsDate.indexOf(project)}>
                                     <Card style={styles.card}>
                                         <CardActionArea onClick={event => {
                                             let url = window.location.protocol + "//" + window.location.host + "#" + "/project/" + project.projectName;

@@ -16,7 +16,7 @@ function Education() {
         background: {
             // paddingTop: 100,
             backgroundColor: "#ffffff",
-            marginBottom: 413, // this is to achieve the footer behavior
+            marginBottom: 400, // this is to achieve the footer behavior
             boxShadow: "0px 20px 20px 0px #00000014",
         },
         titleSection: {
@@ -59,7 +59,7 @@ function Education() {
         <div id="education" style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
-                    <Grid item lg={4}>
+                    <Grid item md={4} >
 
                         <div className={"fontStyle"}
                              style={styles.titleSection}>
@@ -68,7 +68,7 @@ function Education() {
 
                         </div>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item md={8} xs={12}>
                         <div className={"fontStyle"} style={styles.contentSection}>
 
                             <div>

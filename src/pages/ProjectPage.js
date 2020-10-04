@@ -7,6 +7,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
+import MobileAppBarProjectPage from "./MobileAppBarProjectPage";
 
 function ProjectPage() {
 
@@ -71,7 +72,7 @@ function ProjectPage() {
 
     return (
         <div style={styles.background} className={"fontStyle"}>
-            <AppBar position="fixed" style={styles.appBar}>
+            <AppBar id="landscapeFlex" position="fixed" style={styles.appBar}>
                 <Container maxWidth="lg">
                     <Toolbar>
                         <Box style={styles.name} onClick={() => {
@@ -131,6 +132,8 @@ function ProjectPage() {
                 </Container>
 
             </AppBar>
+
+            <MobileAppBarProjectPage/>
 
             <Container style={styles.projectContent} maxWidth="sm">
 

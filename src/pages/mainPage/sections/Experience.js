@@ -19,6 +19,7 @@ import {makeStyles} from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     paper: {
         padding: '20px 20px',
+        marginTop: "10px",
     },
     secondaryTail: {
         backgroundColor: theme.palette.secondary.main,
@@ -32,6 +33,7 @@ function Experience() {
     const styles = {
         background: {
             backgroundColor: "#ffffff",
+            paddingBottom: 50,
         },
         titleSection: {
             marginLeft: "auto",
@@ -42,7 +44,7 @@ function Experience() {
             textAlign: 'right',
         },
         contentSection: {
-            marginTop: 50
+            // marginTop: 50
         },
         jobTitle: {
             fontSize: 30,
@@ -69,6 +71,117 @@ function Experience() {
         }
     };
 
+
+    const imgly = <Paper elevation={3} className={classes.paper}>
+        <div style={styles.jobTitle}>Android Developer</div>
+        <a style={styles.company} href={"https://www.uni-due.de/"} target={"blank"}>
+            img.ly GmbH, Bochum
+            <br/>
+            October 2019 – September 2020
+        </a>
+        <div style={styles.responsibilities}>
+            Responsibilities include:
+            <ul>
+                <li> Implement new features to PhotoEditor SDK and VideoEditor
+                    SDK in the <b>Android</b> version.
+                </li>
+                <li> Create plugins for <b>Cordova</b> and <b>Ionic</b> to wrap the
+                    native
+                    PhotoEditor SDK and VideoEditor SDK to make it easily used and
+                    integrated with apps built using Cordova and Ionic without
+                    forcing the developers to leave their <b>JavaScript</b> tooling
+                    and
+                    programming environment.
+                </li>
+            </ul>
+        </div>
+
+        <div style={styles.responsibilities}>
+            <i>Used methods and tools:</i>
+            <div>
+                Android Studio, Visual Studio Code, Java, Kotlin, Cordova, Ionic,
+                C++, OpenGl.
+            </div>
+        </div>
+
+
+    </Paper>
+
+    const ude = <Paper elevation={3} className={classes.paper}>
+        <div style={styles.jobTitle}>Android & Backend Developer</div>
+        <a style={styles.company} href={"https://interactivesystems.info/"}
+           target={"blank"}>
+            University of Duisburg-Essen | interactive systems Group, Duisburg
+            <br/>
+            August 2018 – September 2020
+        </a>
+        <div style={styles.responsibilities}>
+            Responsibilities include:
+            <ul>
+                <li> Implement an <b>Android</b> application designed to study and
+                    compare
+                    various mood measures and interactive designs.
+                </li>
+                <li> Implement an Android application that I developed as the
+                    platform for running research studies. It tracks user behavior
+                    and <b>smartphone sensor</b> data.
+                </li>
+                <li> Implement the <b>backend</b> for this two previous Android
+                    application
+                    using <b>Spring Boot</b> and design the <b>database</b>.
+                </li>
+            </ul>
+        </div>
+        <div style={styles.responsibilities}>
+            <i>Used methods and tools:</i>
+            <div>
+                Android Studio, Java, Spring Boot, JSON, ContentResolver,
+                ActivityRecognitionClient, AlarmManager, AccessibilityService,
+                Device Sensors, Firebase, ORM database, Git, Postman, Runtime
+                permissions, MySQL, PHP.
+            </div>
+        </div>
+    </Paper>
+
+    const cloudAppers = <Paper elevation={3} className={classes.paper}>
+        <div style={styles.jobTitle}>Android Developer</div>
+        <a style={styles.company} href={"http://cloudappers.com/"}
+           target={"blank"}>
+            CloudAppers, Damascus
+            <br/>
+            February 2016 – August 2017
+        </a>
+        <div style={styles.responsibilities}>
+            Responsibilities include:
+            <ul>
+                <li> Implement an <b>Android</b> application for "Roads and
+                    Transport
+                    Authority" for <b>Dubai E-Government</b> that allows the user to
+                    book
+                    parking, renew or replace driver’s license, renew vehicle
+                    registration, book a taxi, and too many other services.
+                </li>
+                <li> Implement an <b>Android</b> application for the <b>Department
+                    of Culture
+                    and Tourism</b> in Abu Dhabi, this application contains a good
+                    deal
+                    of information about Abu Dhabi city like Hotels & Resorts,
+                    Attractions, Culture & Heritage, Restaurants, and Spas, etc.
+                </li>
+                <li> Implement an intermediate Real Estate <b>Android</b> mobile
+                    application that helps the users connect with agents.
+                </li>
+            </ul>
+        </div>
+        <div style={styles.responsibilities}>
+            <i>Used methods and tools:</i>
+            <div>
+                Java, JSON, XML, Android Studio, Google Maps, Firebase, Git, ArcGIS
+                Maps, Real Time Messaging.
+            </div>
+        </div>
+    </Paper>
+
     return (
         <div id="experience" style={styles.background}>
             <Container maxWidth="lg">
@@ -83,156 +196,61 @@ function Experience() {
 
                         </div>
                     </Grid>
-                    <Grid item xs={8}>
-                        <div className={"fontStyle"} style={styles.contentSection}>
+                    <Grid item md={8} xs={12}>
+                        <div id="landscape" className={"fontStyle"} style={styles.contentSection}>
 
                             <Timeline align="left">
                                 <TimelineItem
                                     data-aos="fade-left"
                                     data-aos-delay="200"
-                                    data-aos-duration="500">
+                                    data-aos-duration="500"
+                                >
                                     <TimelineOppositeContent style={styles.removeOppositeContent}/>
                                     <TimelineSeparator>
                                         <TimelineDot/>
                                         <TimelineConnector/>
                                     </TimelineSeparator>
                                     <TimelineContent>
-                                        <Paper elevation={3} className={classes.paper}>
-                                            <div style={styles.jobTitle}>Android Developer</div>
-                                            <a style={styles.company} href={"https://www.uni-due.de/"} target={"blank"}>
-                                                img.ly GmbH, Bochum
-                                                <br/>
-                                                October 2019 – September 2020
-                                            </a>
-                                            <div style={styles.responsibilities}>
-                                                Responsibilities include:
-                                                <ul>
-                                                    <li> Implement new features to PhotoEditor SDK and VideoEditor
-                                                        SDK in the <b>Android</b> version.
-                                                    </li>
-                                                    <li> Create plugins for <b>Cordova</b> and <b>Ionic</b> to wrap the
-                                                        native
-                                                        PhotoEditor SDK and VideoEditor SDK to make it easily used and
-                                                        integrated with apps built using Cordova and Ionic without
-                                                        forcing the developers to leave their <b>JavaScript</b> tooling
-                                                        and
-                                                        programming environment.
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div style={styles.responsibilities}>
-                                                <i>Used methods and tools:</i>
-                                                <div>
-                                                    Android Studio, Visual Studio Code, Java, Kotlin, Cordova, Ionic,
-                                                    C++, OpenGl.
-                                                </div>
-                                            </div>
-
-
-                                        </Paper>
+                                        {imgly}
                                     </TimelineContent>
                                 </TimelineItem>
                                 <TimelineItem
                                     data-aos="fade-left"
                                     data-aos-delay="200"
-                                    data-aos-duration="500">
+                                    data-aos-duration="500"
+                                >
                                     <TimelineOppositeContent style={styles.removeOppositeContent}/>
                                     <TimelineSeparator>
                                         <TimelineDot/>
                                         <TimelineConnector/>
                                     </TimelineSeparator>
                                     <TimelineContent>
-                                        <Paper elevation={3} className={classes.paper}>
-                                            <div style={styles.jobTitle}>Android & Backend Developer</div>
-                                            <a style={styles.company} href={"https://interactivesystems.info/"}
-                                               target={"blank"}>
-                                                University of Duisburg-Essen | interactive systems Group, Duisburg
-                                                <br/>
-                                                August 2018 – September 2020
-                                            </a>
-                                            <div style={styles.responsibilities}>
-                                                Responsibilities include:
-                                                <ul>
-                                                    <li> Implement an <b>Android</b> application designed to study and
-                                                        compare
-                                                        various mood measures and interactive designs.
-                                                    </li>
-                                                    <li> Implement an Android application that I developed as the
-                                                        platform for running research studies. It tracks user behavior
-                                                        and <b>smartphone sensor</b> data.
-                                                    </li>
-                                                    <li> Implement the <b>backend</b> for this two previous Android
-                                                        application
-                                                        using <b>Spring Boot</b> and design the <b>database</b>.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div style={styles.responsibilities}>
-                                                <i>Used methods and tools:</i>
-                                                <div>
-                                                    Android Studio, Java, Spring Boot, JSON, ContentResolver,
-                                                    ActivityRecognitionClient, AlarmManager, AccessibilityService,
-                                                    Device Sensors, Firebase, ORM database, Git, Postman, Runtime
-                                                    permissions, MySQL, PHP.
-                                                </div>
-                                            </div>
-                                        </Paper>
+                                        {ude}
                                     </TimelineContent>
                                 </TimelineItem>
 
                                 <TimelineItem
                                     data-aos="fade-left"
                                     data-aos-delay="200"
-                                    data-aos-duration="500">
+                                    data-aos-duration="500"
+                                >
                                     <TimelineOppositeContent style={styles.removeOppositeContent}/>
                                     <TimelineSeparator>
                                         <TimelineDot/>
                                         <TimelineConnector/>
                                     </TimelineSeparator>
                                     <TimelineContent>
-                                        <Paper elevation={3} className={classes.paper}>
-                                            <div style={styles.jobTitle}>Android Developer</div>
-                                            <a style={styles.company} href={"http://cloudappers.com/"}
-                                               target={"blank"}>
-                                                CloudAppers, Damascus
-                                                <br/>
-                                                February 2016 – August 2017
-                                            </a>
-                                            <div style={styles.responsibilities}>
-                                                Responsibilities include:
-                                                <ul>
-                                                    <li> Implement an <b>Android</b> application for "Roads and
-                                                        Transport
-                                                        Authority" for <b>Dubai E-Government</b> that allows the user to
-                                                        book
-                                                        parking, renew or replace driver’s license, renew vehicle
-                                                        registration, book a taxi, and too many other services.
-                                                    </li>
-                                                    <li> Implement an <b>Android</b> application for the <b>Department
-                                                        of Culture
-                                                        and Tourism</b> in Abu Dhabi, this application contains a good
-                                                        deal
-                                                        of information about Abu Dhabi city like Hotels & Resorts,
-                                                        Attractions, Culture & Heritage, Restaurants, and Spas, etc.
-                                                    </li>
-                                                    <li> Implement an intermediate Real Estate <b>Android</b> mobile
-                                                        application that helps the users connect with agents.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div style={styles.responsibilities}>
-                                                <i>Used methods and tools:</i>
-                                                <div>
-                                                    Java, JSON, XML, Android Studio, Google Maps, Firebase, Git, ArcGIS
-                                                    Maps, Real Time Messaging.
-                                                </div>
-                                            </div>
-                                        </Paper>
+                                        {cloudAppers}
                                     </TimelineContent>
                                 </TimelineItem>
 
                             </Timeline>
+                        </div>
+
+                        <div id="mobile" className={"fontStyle"} style={styles.contentSection}>
+                            {imgly}
+                            {ude}
+                            {cloudAppers}
                         </div>
 
                     </Grid>

@@ -29,7 +29,7 @@ function Home() {
         <div>
             <Biography id="biography"/>
             <Skills id="skills"/>
-            <Experience id="experience"/>
+            <Experience id="experience" className="showBig"/>
             <Projects id="projects"/>
             <Education id="education"/>
             <Contact id="contact"/>
