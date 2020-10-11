@@ -74,7 +74,7 @@ function Experience() {
 
     const imgly = <Paper elevation={3} className={classes.paper}>
         <div style={styles.jobTitle}>Android Developer</div>
-        <a style={styles.company} href={"https://www.uni-due.de/"} target={"blank"}>
+        <a style={styles.company} href={"https://photoeditorsdk.com/"} target={"blank"}>
             img.ly GmbH, Bochum
             <br/>
             October 2019 – September 2020
