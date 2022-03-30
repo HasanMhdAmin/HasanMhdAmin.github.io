@@ -174,7 +174,7 @@ function Biography() {
                             </div>
 
                             <a style={styles.cvLink}
-                               href="https://drive.google.com/file/d/1bZ58TLDK1huV5yzux8ezFMaICn7YO5t5/view"
+                               href="https://drive.google.com/file/d/1ujjhTEiO0WdIeQnpfxz4TyLotSi37u3d/view"
                                target="_blank">
                                 <Button
                                     variant="contained"
