@@ -73,8 +73,8 @@ function Skills() {
                           data-aos-delay="1200"
                           data-aos-duration="1000">
                         <div style={styles.item}>
-                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/java.svg"} alt={"Java icon"}/>
-                            <h1 className={"subheading"}>Java</h1>
+                            <img style={styles.image} src={"https://blog.jetbrains.com/wp-content/uploads/2019/01/kotlin_logotype.svg"} alt={"Java icon"}/>
+                            <h1 className={"subheading"}>Kotlin</h1>
                         </div>
                     </Grid>
                 </Grid>
@@ -87,8 +87,8 @@ function Skills() {
                         <Paper elevation={3} style={styles.section}>
                             <h1 className={"subheading"}>Mobile Application Technologies</h1>
                             <div style={styles.responsibilities}>
-                                Android Studio, Java, Kotlin, MVVM, Firebase, Create plugins for (Ionic & Cordova),
-                                Google Maps, REST, JSON, XML.
+                                Android Studio, Java, Kotlin, Flutter, MVVM, Firebase, Room DB, Dagger DI,
+                                Create plugins for (Ionic & Cordova), Google Maps, REST, JSON, XML.
                             </div>
                         </Paper>
                     </Grid>
@@ -110,8 +110,8 @@ function Skills() {
                         <Paper elevation={3} style={styles.section}>
                             <h1 className={"subheading"}>Backend Technologies</h1>
                             <div style={styles.responsibilities}>
-                                Spring Boot, ASP.Net webAPI, C#, MSSQL, MySQL, Oracle, SQLite, MS Entity Framework,
-                                Hibernate, JPA, LINQ, MongoDB, Postman.
+                                Spring Boot, ASP.Net Core, webAPI, C#, MSSQL, MySQL, Oracle, SQLite,
+                                MS Entity Framework, Hibernate, JPA, LINQ, MongoDB, Postman.
                             </div>
                         </Paper>
                     </Grid>

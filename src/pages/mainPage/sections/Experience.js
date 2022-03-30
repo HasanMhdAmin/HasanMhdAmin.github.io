@@ -95,6 +95,28 @@ function Experience() {
             </Grid>
         </Grid>
 
+        <div style={styles.responsibilities}>
+            Responsibilities include:
+            <ul>
+                <li> Developing an <b>Android</b> application that runs on <b>Android TV</b> and <b>Chromebox OS</b>.
+                    This is an Android app that runs on a large touch-screen like a <b>Kiosk</b> to let the user interact with it and place an order.
+                    This application has different build variants to support other companies besides Deichman like (<a href={"https://www.dosenbach.ch/"} target={"blank"}>Dosenbach</a> and <a href={"https://www.ochsner-shoes.ch/"} target={"blank"}>Ochsner Shoes</a> in Switzerland, <a href={"https://www.vanharen.nl/"} target={"blank"}>vanHaren</a> in the Netherlands and in Belgium) by creating multiple applications with only one code-base.
+                </li>
+                <li> Support a digital agency to create the Android client mobile app.
+                </li>
+                <li>Create libraries to use in the app and provide it to the agency that develops the mobile app.</li>
+                <li>Develop a backend using <b>.Net Core</b> to let Mandates manage their advertisements that appear on the screens in each store.</li>
+            </ul>
+        </div>
+
+        <div style={styles.responsibilities}>
+            <i>Used methods and tools:</i>
+            <div>
+                Android Studio, Visual Studio Code, Java, Kotlin, Cordova, Ionic,
+                C++, OpenGl.
+            </div>
+        </div>
+
     </Paper>
 
 
