@@ -13,10 +13,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import {Link} from 'react-scroll';
 import MobileAppBar from "../../MobileAppBar";
+import BiographyData from '../../../projectsResource/biography';
 
 
 function Biography() {
-
+    const biographyData = BiographyData
     const styles = {
         name: {
             fontWeight: "bold",
@@ -144,7 +145,7 @@ function Biography() {
                                         <LinkedInIcon color="primary" style={{fontSize: 50}}/>
                                     </a>
                                     <a href="https://github.com/hasanMhdAmin" target="_blank">
-                                        <GitHubIcon color="primary" style={{fontSize: 50}}/>
+                                        <GitHubIcon color="primary" style={{fontSize: 40, margin: 5}}/>
                                     </a>
                                 </div>
 
@@ -152,25 +153,8 @@ function Biography() {
                         </Grid>
                         <Grid item sm={8} xs={12} style={styles.biography}>
                             <div className={"fontStyle"}>
-
                                 <h1 className={"fontStyle"}>Biography</h1>
-                                <p>
-
-                                    I am a <b>software engineer</b> with a passion for computer science. I earned a
-                                    Bachelor’s
-                                    degree in Informatics Engineering from Arab International University, and then a
-                                    Master’s degree in Computer Engineering from the University of Duisburg-Essen.
-                                    <br/>
-                                    I enjoy being challenged and engaging with projects that require me to open my mind
-                                    and learn new technologies.
-                                    <br/>
-                                    I build systems and solutions that meet customer needs. I have good experiences with
-                                    developing native Android applications and web applications using JS frameworks,
-                                    e.g. ReactJS for frontend, and Spring Boot/Java for the backend.
-                                    <br/>
-                                    I believe that I have a lot to contribute to a team environment; I love to help
-                                    resolve group issues through research and communication.
-                                </p>
+                                <div dangerouslySetInnerHTML={ {__html: biographyData.biography} } />
                             </div>
 
                             <a style={styles.cvLink}
