@@ -4,10 +4,11 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import AOS from 'aos';
+import SkillsData from '../../../projectsResource/skills';
 
 function Skills() {
     AOS.init();
-
+    const skillsData = SkillsData
     const styles = {
         background: {
             paddingTop: 70,
@@ -50,82 +51,38 @@ function Skills() {
                 </div>
 
                 <Grid container spacing={3}>
-                    <Grid item md={4} xs={12}
-                          data-aos="fade-up"
-                          data-aos-delay="400"
-                          data-aos-duration="1000">
-                        <div style={styles.item}>
-                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/android.svg"} alt={"Android icon"}/>
-                            <h1 className={"subheading"}>Android</h1>
-                        </div>
-                    </Grid>
-                    <Grid item md={4} xs={12}
-                          data-aos="fade-up"
-                          data-aos-delay="800"
-                          data-aos-duration="1000">
-                        <div style={styles.item}>
-                            <img style={styles.image} src={process.env.PUBLIC_URL + "/images/frontend.svg"} alt={"Full Stack icon"}/>
-                            <h1 className={"subheading"}>Full Stack</h1>
-                        </div>
-                    </Grid>
-                    <Grid item md={4} xs={12}
-                          data-aos="fade-up"
-                          data-aos-delay="1200"
-                          data-aos-duration="1000">
-                        <div style={styles.item}>
-                            <img style={styles.image} src={"https://blog.jetbrains.com/wp-content/uploads/2019/01/kotlin_logotype.svg"} alt={"Java icon"}/>
-                            <h1 className={"subheading"}>Kotlin</h1>
-                        </div>
-                    </Grid>
+
+                    {skillsData.focus.map((focusItem, index) => (
+                        <Grid item md={12 / skillsData.focusItemInRow} xs={12}
+                              data-aos="fade-up"
+                              data-aos-delay={index * 400 + 400}
+                              data-aos-duration="1000">
+                            <div style={styles.item}>
+                                <img style={styles.image} src={process.env.PUBLIC_URL + focusItem.image}
+                                     alt={focusItem.alt}/>
+                                <h1 className={"subheading"}>Android</h1>
+                            </div>
+                        </Grid>
+                    ))}
+
                 </Grid>
 
                 <Grid container spacing={3}>
-                    <Grid item md={6} xs={12}
-                          data-aos="fade-up"
-                          data-aos-delay="400"
-                          data-aos-duration="1000">
-                        <Paper elevation={3} style={styles.section}>
-                            <h1 className={"subheading"}>Mobile Application Technologies</h1>
-                            <div style={styles.responsibilities}>
-                                Android Studio, Java, Kotlin, Flutter, MVVM, Firebase, Room DB, Dagger DI,
-                                Create plugins for (Ionic & Cordova), Google Maps, REST, JSON, XML.
-                            </div>
-                        </Paper>
-                    </Grid>
-                    <Grid item md={6} xs={12}
-                          data-aos="fade-up"
-                          data-aos-delay="600"
-                          data-aos-duration="1000">
-                        <Paper elevation={3} style={styles.section}>
-                            <h1 className={"subheading"}>Frontend Technologies</h1>
-                            <div style={styles.responsibilities}>
-                                ReactJS, JavaScript, TypeScript, HTML5, CSS, ASP.Net, Bootstrap, WordPress, Joomla.
-                            </div>
-                        </Paper>
-                    </Grid>
-                    <Grid item md={6} xs={12}  style={styles.sectionWrapper}
-                          data-aos="fade-up"
-                          data-aos-delay="400"
-                          data-aos-duration="1000">
-                        <Paper elevation={3} style={styles.section}>
-                            <h1 className={"subheading"}>Backend Technologies</h1>
-                            <div style={styles.responsibilities}>
-                                Spring Boot, ASP.Net Core, webAPI, C#, MSSQL, MySQL, Oracle, SQLite,
-                                MS Entity Framework, Hibernate, JPA, LINQ, MongoDB, Postman.
-                            </div>
-                        </Paper>
-                    </Grid>
-                    <Grid item md={6} xs={12}
-                          data-aos="fade-up"
-                          data-aos-delay="600"
-                          data-aos-duration="1000">
-                        <Paper elevation={3} style={styles.section}>
-                            <h1 className={"subheading"}>Project management tools</h1>
-                            <div style={styles.responsibilities}>
-                                Git, Jira, Trello, Slack, Agile methodology.
-                            </div>
-                        </Paper>
-                    </Grid>
+
+                    {skillsData.fields.map((field, index) => (
+                        <Grid item md={6} xs={12}
+                              data-aos="fade-up"
+                              data-aos-delay={index % 2 === 0 ? 400 : 800}
+                              data-aos-duration="1000">
+                            <Paper elevation={3} style={styles.section}>
+                                <h1 className={"subheading"}>{field.title}</h1>
+                                <div style={styles.responsibilities}>
+                                    {field.description}
+                                </div>
+                            </Paper>
+                        </Grid>
+                    ))}
+
                 </Grid>
 
             </Container>
