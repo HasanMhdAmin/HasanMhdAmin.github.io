@@ -4,11 +4,14 @@ import {createMuiTheme, MuiThemeProvider} from "@material-ui/core";
 import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
 import Home from "./pages/mainPage/Home";
 import ProjectPage from "./pages/ProjectPage";
+import MainConfig from './projectsResource/main_config';
 
 function App() {
+    const mainConfig = MainConfig
+
     const theme = createMuiTheme({
         palette: {
-            primary: {main: '#0a549f'},
+            primary: {main: mainConfig.color},
             secondary: {main: '#757575'},
             // blue: {main: '#1a73e8'},
         },

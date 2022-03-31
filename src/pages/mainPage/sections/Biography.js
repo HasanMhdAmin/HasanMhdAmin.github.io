@@ -14,10 +14,12 @@ import GetAppIcon from '@material-ui/icons/GetApp';
 import {Link} from 'react-scroll';
 import MobileAppBar from "../../MobileAppBar";
 import BiographyData from '../../../projectsResource/biography';
+import MainConfig from '../../../projectsResource/main_config';
 
 
 function Biography() {
     const biographyData = BiographyData
+    const mainConfig = MainConfig
     const styles = {
         name: {
             fontWeight: "bold",
@@ -65,6 +67,33 @@ function Biography() {
         },
     };
 
+    const email = () => {
+        if (mainConfig.contact.email != null)
+            return <a href={"mailto:" + mainConfig.contact.email} target="_blank">
+                <EmailIcon color="primary" style={{fontSize: 50}}/>
+            </a>
+        else
+            return <div/>
+    };
+
+    const linkedin = () => {
+        if (mainConfig.contact.linkedin != null)
+            return <a href={mainConfig.contact.linkedin} target="_blank">
+                <LinkedInIcon color="primary" style={{fontSize: 50}}/>
+            </a>
+        else
+            return <div/>
+    };
+
+    const github = () => {
+        if (mainConfig.contact.github != null)
+            return <a href={mainConfig.contact.github} target="_blank">
+                <GitHubIcon color="primary" style={{fontSize: 40, margin: 5}}/>
+            </a>
+        else
+            return <div/>
+    };
+
     return (
         <div id="home" className={"fontStyle"}>
             <AppBar position="fixed"
@@ -77,7 +106,7 @@ function Biography() {
                             let url = window.location.protocol + "//" + window.location.host;
                             window.location.replace(url);
                         }}>
-                            Hasan Mhd Amin
+                            {mainConfig.name}
                         </Box>
 
                         <Box style={styles.topMenu}>
@@ -129,32 +158,27 @@ function Biography() {
                         <Grid item sm={4} xs={12}>
                             <div style={styles.profileSection}>
                                 <div>
-                                    <Avatar alt="Hasan Mhd Amin photo"
-                                            src={process.env.PUBLIC_URL + "/images/hasan.jpg"}
+                                    <Avatar alt={mainConfig.name + " photo"}
+                                            src={process.env.PUBLIC_URL + mainConfig.picture}
                                             style={styles.userAvatar}/>
 
-                                    <div className={"fontStyle heading"} style={styles.profileName}>Hasan Mhd Amin</div>
-                                    <div className={"fontStyle subheading"} style={styles.profileExperience}>Android
-                                        Application Developer <br/>
-                                        Full Stack Developer
+                                    <div className={"fontStyle heading"}
+                                         style={styles.profileName}>{mainConfig.name}</div>
+                                    <div className={"fontStyle subheading"} style={styles.profileExperience}>
+                                        <div dangerouslySetInnerHTML={{__html: mainConfig.headline}}/>
                                     </div>
-                                    <a href="mailto:hasan.mhd.amin@gmail.com" target="_blank">
-                                        <EmailIcon color="primary" style={{fontSize: 50}}/>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/hasanmhdamin/" target="_blank">
-                                        <LinkedInIcon color="primary" style={{fontSize: 50}}/>
-                                    </a>
-                                    <a href="https://github.com/hasanMhdAmin" target="_blank">
-                                        <GitHubIcon color="primary" style={{fontSize: 40, margin: 5}}/>
-                                    </a>
-                                </div>
 
+                                    {email()}
+                                    {linkedin()}
+                                    {github()}
+
+                                </div>
                             </div>
                         </Grid>
                         <Grid item sm={8} xs={12} style={styles.biography}>
                             <div className={"fontStyle"}>
                                 <h1 className={"fontStyle"}>Biography</h1>
-                                <div dangerouslySetInnerHTML={ {__html: biographyData.biography} } />
+                                <div dangerouslySetInnerHTML={{__html: biographyData.biography}}/>
                             </div>
 
                             <a style={styles.cvLink}

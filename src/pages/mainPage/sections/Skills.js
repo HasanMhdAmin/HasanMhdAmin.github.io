@@ -60,7 +60,7 @@ function Skills() {
                             <div style={styles.item}>
                                 <img style={styles.image} src={process.env.PUBLIC_URL + focusItem.image}
                                      alt={focusItem.alt}/>
-                                <h1 className={"subheading"}>Android</h1>
+                                <h1 className={"subheading"}>{focusItem.title}</h1>
                             </div>
                         </Grid>
                     ))}
