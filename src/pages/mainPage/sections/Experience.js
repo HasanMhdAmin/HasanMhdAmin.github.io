@@ -11,6 +11,7 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import AOS from 'aos';
+import ExperienceData from '../../../projectsResource/experience';
 
 import Paper from '@material-ui/core/Paper';
 
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Experience() {
     AOS.init();
+    const experienceData = ExperienceData
     const classes = useStyles();
 
     const styles = {
@@ -77,191 +79,41 @@ function Experience() {
         },
     };
 
-    const deichmann = <Paper elevation={3} className={classes.paper}>
+    function getExperiences() {
+        return experienceData.map(experience => (
+            <Paper elevation={3} className={classes.paper}>
 
-        <Grid container spacing={3}>
-            <Grid item xs={10}>
-                <div style={styles.jobTitle}>Software Engineer | Android Developer</div>
-                <a style={styles.company} href={"https://deichmann.com/"} target={"blank"}>
-                    Deichmann, Essen
-                    <br/>
-                    February 2021 – <b>Today</b>
-                </a>
-            </Grid>
-            <Grid item xs={2}>
-                <a href={"https://deichmann.com/"} target={"blank"}>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/logos/deichmann.jpeg"} alt={"deichmann logo"}/>
-                </a>
-            </Grid>
-        </Grid>
+                <Grid container spacing={3}>
+                    <Grid item xs={10}>
+                        <div style={styles.jobTitle}>
+                            <div dangerouslySetInnerHTML={{__html: experience.jobPosition}}/>
+                        </div>
+                        <a style={styles.company} href={experience.companyUrl} target={"blank"}>
+                            <div dangerouslySetInnerHTML={{__html: experience.company}}/>
+                            <div dangerouslySetInnerHTML={{__html: experience.duration}}/>
+                        </a>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <a href={experience.companyUrl} target={"blank"}>
+                            <img style={styles.image} src={process.env.PUBLIC_URL + experience.companyImageUrl}
+                                 alt={experience.imageAlt}/>
+                        </a>
+                    </Grid>
+                </Grid>
 
-        <div style={styles.responsibilities}>
-            Responsibilities include:
-            <ul>
-                <li> Developing an <b>Android</b> application that runs on <b>Android TV</b> and <b>Chromebox OS</b>.
-                    This is an Android app that runs on a large touch-screen like a <b>Kiosk</b> to let the user interact with it and place an order.
-                    This application has different build variants to support other companies besides Deichman like (<a href={"https://www.dosenbach.ch/"} target={"blank"}>Dosenbach</a> and <a href={"https://www.ochsner-shoes.ch/"} target={"blank"}>Ochsner Shoes</a> in Switzerland, <a href={"https://www.vanharen.nl/"} target={"blank"}>vanHaren</a> in the Netherlands and in Belgium) by creating multiple applications with only one code-base.
-                </li>
-                <li> Support a digital agency to create the Android client mobile app.
-                </li>
-                <li>Create libraries to use in the app and provide it to the agency that develops the mobile app.</li>
-                <li>Develop a backend using <b>.Net Core</b> to let Mandates manage their advertisements that appear on the screens in each store.</li>
-            </ul>
-        </div>
+                <div style={styles.responsibilities}>
+                    Responsibilities include:
+                    <div dangerouslySetInnerHTML={{__html: experience.responsibilities}}/>
+                </div>
 
-        <div style={styles.responsibilities}>
-            <i>Used methods and tools:</i>
-            <div>
-                Android Studio, Visual Studio Code, Java, Kotlin, Cordova, Ionic,
-                C++, OpenGl.
-            </div>
-        </div>
+                <div style={styles.responsibilities}>
+                    <i>Used methods and tools:</i>
+                    <div dangerouslySetInnerHTML={{__html: experience.tools}}/>
+                </div>
 
-    </Paper>
-
-
-    const imgly = <Paper elevation={3} className={classes.paper}>
-
-        <Grid container spacing={3}>
-            <Grid item xs={10}>
-                <div style={styles.jobTitle}>Android Developer</div>
-                <a style={styles.company} href={"https://photoeditorsdk.com/"} target={"blank"}>
-                    img.ly GmbH, Bochum
-                    <br/>
-                    October 2019 – September 2020
-                </a>
-            </Grid>
-            <Grid item xs={2}>
-                <a href={"https://photoeditorsdk.com/"} target={"blank"}>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/logos/imgly.png"} alt={"img.ly logo"}/>
-                </a>
-            </Grid>
-        </Grid>
-
-        <div style={styles.responsibilities}>
-            Responsibilities include:
-            <ul>
-                <li> Implement new features to PhotoEditor SDK and VideoEditor
-                    SDK in the <b>Android</b> version.
-                </li>
-                <li> Create plugins for <b>Cordova</b> and <b>Ionic</b> to wrap the
-                    native
-                    PhotoEditor SDK and VideoEditor SDK to make it easily used and
-                    integrated with apps built using Cordova and Ionic without
-                    forcing the developers to leave their <b>JavaScript</b> tooling
-                    and
-                    programming environment.
-                </li>
-            </ul>
-        </div>
-
-        <div style={styles.responsibilities}>
-            <i>Used methods and tools:</i>
-            <div>
-                Android Studio, Visual Studio Code, Java, Kotlin, Cordova, Ionic,
-                C++, OpenGl.
-            </div>
-        </div>
-
-
-    </Paper>
-
-    const ude = <Paper elevation={3} className={classes.paper}>
-
-        <Grid container spacing={3}>
-            <Grid item xs={10}>
-                <div style={styles.jobTitle}>Android & Backend Developer</div>
-                <a style={styles.company} href={"https://interactivesystems.info/"}
-                   target={"blank"}>
-                    University of Duisburg-Essen <br/> interactive systems Group, Duisburg
-                    <br/>
-                    August 2018 – September 2020
-                </a>
-            </Grid>
-            <Grid item xs={2} >
-                <a href={"https://interactivesystems.info/"} target={"blank"}>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/logos/interactive_systems.png"} alt={"interactive systems logo"}/>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/logos/uni_due.png"} alt={"Uni DUE logo"}/>
-                </a>
-            </Grid>
-        </Grid>
-
-        <div style={styles.responsibilities}>
-            Responsibilities include:
-            <ul>
-                <li> Implement an <b>Android</b> application designed to study and
-                    compare
-                    various mood measures and interactive designs.
-                </li>
-                <li> Implement an Android application that I developed as the
-                    platform for running research studies. It tracks user behavior
-                    and <b>smartphone sensor</b> data.
-                </li>
-                <li> Implement the <b>backend</b> for this two previous Android
-                    application
-                    using <b>Spring Boot</b> and design the <b>database</b>.
-                </li>
-            </ul>
-        </div>
-        <div style={styles.responsibilities}>
-            <i>Used methods and tools:</i>
-            <div>
-                Android Studio, Java, Spring Boot, JSON, ContentResolver,
-                ActivityRecognitionClient, AlarmManager, AccessibilityService,
-                Device Sensors, Firebase, ORM database, Git, Postman, Runtime
-                permissions, MySQL, PHP.
-            </div>
-        </div>
-    </Paper>
-
-    const cloudAppers = <Paper elevation={3} className={classes.paper}>
-
-        <Grid container spacing={3}>
-            <Grid item xs={10}>
-                <div style={styles.jobTitle}>Android Developer</div>
-                <a style={styles.company} href={"http://cloudappers.com/"}
-                   target={"blank"}>
-                    CloudAppers, Damascus
-                    <br/>
-                    February 2016 – August 2017
-                </a>
-            </Grid>
-            <Grid item xs={2} >
-                <a href={"http://cloudappers.com/"} target={"blank"}>
-                <img style={styles.image} src={process.env.PUBLIC_URL + "/images/logos/cloudappers.png"} alt={"interactive systems logo"}/>
-               </a>
-            </Grid>
-        </Grid>
-        <div style={styles.responsibilities}>
-            Responsibilities include:
-            <ul>
-                <li> Implement an <b>Android</b> application for "Roads and
-                    Transport
-                    Authority" for <b>Dubai E-Government</b> that allows the user to
-                    book
-                    parking, renew or replace driver’s license, renew vehicle
-                    registration, book a taxi, and too many other services.
-                </li>
-                <li> Implement an <b>Android</b> application for the <b>Department
-                    of Culture
-                    and Tourism</b> in Abu Dhabi, this application contains a good
-                    deal
-                    of information about Abu Dhabi city like Hotels & Resorts,
-                    Attractions, Culture & Heritage, Restaurants, and Spas, etc.
-                </li>
-                <li> Implement an intermediate Real Estate <b>Android</b> mobile
-                    application that helps the users connect with agents.
-                </li>
-            </ul>
-        </div>
-        <div style={styles.responsibilities}>
-            <i>Used methods and tools:</i>
-            <div>
-                Java, JSON, XML, Android Studio, Google Maps, Firebase, Git, ArcGIS
-                Maps, Real Time Messaging.
-            </div>
-        </div>
-    </Paper>
+            </Paper>
+        ))
+    }
 
     return (
         <div id="experience" style={styles.background}>
@@ -281,72 +133,31 @@ function Experience() {
                         <div id="landscape" className={"fontStyle"} style={styles.contentSection}>
 
                             <Timeline align="left">
-                                <TimelineItem
-                                    data-aos="fade-left"
-                                    data-aos-delay="200"
-                                    data-aos-duration="500"
-                                >
-                                    <TimelineOppositeContent style={styles.removeOppositeContent}/>
-                                    <TimelineSeparator>
-                                        <TimelineDot/>
-                                        <TimelineConnector/>
-                                    </TimelineSeparator>
-                                    <TimelineContent>
-                                        {deichmann}
-                                    </TimelineContent>
-                                </TimelineItem>
-                                <TimelineItem
-                                    data-aos="fade-left"
-                                    data-aos-delay="200"
-                                    data-aos-duration="500"
-                                >
-                                    <TimelineOppositeContent style={styles.removeOppositeContent}/>
-                                    <TimelineSeparator>
-                                        <TimelineDot/>
-                                        <TimelineConnector/>
-                                    </TimelineSeparator>
-                                    <TimelineContent>
-                                        {imgly}
-                                    </TimelineContent>
-                                </TimelineItem>
-                                <TimelineItem
-                                    data-aos="fade-left"
-                                    data-aos-delay="200"
-                                    data-aos-duration="500"
-                                >
-                                    <TimelineOppositeContent style={styles.removeOppositeContent}/>
-                                    <TimelineSeparator>
-                                        <TimelineDot/>
-                                        <TimelineConnector/>
-                                    </TimelineSeparator>
-                                    <TimelineContent>
-                                        {ude}
-                                    </TimelineContent>
-                                </TimelineItem>
 
-                                <TimelineItem
-                                    data-aos="fade-left"
-                                    data-aos-delay="200"
-                                    data-aos-duration="500"
-                                >
-                                    <TimelineOppositeContent style={styles.removeOppositeContent}/>
-                                    <TimelineSeparator>
-                                        <TimelineDot/>
-                                        <TimelineConnector/>
-                                    </TimelineSeparator>
-                                    <TimelineContent>
-                                        {cloudAppers}
-                                    </TimelineContent>
-                                </TimelineItem>
+                                {
+                                    getExperiences().map(experiencePaper => (
+                                        <TimelineItem
+                                            data-aos="fade-left"
+                                            data-aos-delay="200"
+                                            data-aos-duration="500"
+                                        >
+                                            <TimelineOppositeContent style={styles.removeOppositeContent}/>
+                                            <TimelineSeparator>
+                                                <TimelineDot/>
+                                                <TimelineConnector/>
+                                            </TimelineSeparator>
+                                            <TimelineContent>
+                                                {experiencePaper}
+                                            </TimelineContent>
+                                        </TimelineItem>
+                                    ))
+                                }
 
                             </Timeline>
                         </div>
 
                         <div id="mobile" className={"fontStyle"} style={styles.contentSection}>
-                            {deichmann}
-                            {imgly}
-                            {ude}
-                            {cloudAppers}
+                            {getExperiences()}
                         </div>
 
                     </Grid>
