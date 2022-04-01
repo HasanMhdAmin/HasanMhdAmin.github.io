@@ -182,7 +182,7 @@ function Biography() {
                             </div>
 
                             <a style={styles.cvLink}
-                               href="https://drive.google.com/file/d/1ujjhTEiO0WdIeQnpfxz4TyLotSi37u3d/view"
+                               href={mainConfig.cvUrl}
                                target="_blank">
                                 <Button
                                     variant="contained"
