@@ -14,7 +14,7 @@
   "showFocus": true,
   "showFields": true,
   "showExperience": true,
-  "showProjects": true,
+  "showProjects": false,
   "showEducation": true,
   "showCertificates": true,
   "showContact": true,

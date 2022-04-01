@@ -130,7 +130,6 @@ function Contact() {
 
                         {footer()}
 
-
                     </Container>
                 </div>
 

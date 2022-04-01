@@ -7,9 +7,11 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import {useParams} from "react-router-dom";
+import MainConfig from '../../projectsResource/main_config';
 
 function Home() {
     let {section} = useParams();
+    const mainConfig = MainConfig
 
     React.useEffect(() => {
 
@@ -24,13 +26,19 @@ function Home() {
 
     }, []);
 
+    const projects = () => {
+        if (mainConfig.showProjects)
+            return <Projects id="projects"/>
+        else
+            return <div/>
+    };
 
     return (
         <div>
             <Biography id="biography"/>
             <Skills id="skills"/>
             <Experience id="experience" className="showBig"/>
-            <Projects id="projects"/>
+            {projects()}
             <Education id="education"/>
             <Contact id="contact"/>
         </div>
