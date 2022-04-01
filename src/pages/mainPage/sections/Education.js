@@ -3,8 +3,11 @@ import '../../../App.css';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import SchoolIcon from '@material-ui/icons/School';
+import EducationData from '../../../projectsResource/education';
 
 function Education() {
+    const educationData = EducationData
+
     const styles = {
         name: {
             fontWeight: "bold",
@@ -59,33 +62,25 @@ function Education() {
         <div id="education" style={styles.background}>
             <Container maxWidth="lg">
                 <Grid container spacing={3}>
-                    <Grid item md={4} >
+                    <Grid item md={4}>
 
                         <div className={"fontStyle"}
                              style={styles.titleSection}>
-
                             <h1 className={"subheading"}>Education</h1>
-
                         </div>
                     </Grid>
                     <Grid item md={8} xs={12}>
                         <div className={"fontStyle"} style={styles.contentSection}>
-
-                            <div>
-                                <SchoolIcon fontSize="large" style={styles.uniIcon}/> <span style={styles.uni}> M.Sc. in Computer Engineering, 2020</span>
-                                <br/>
-                                <a style={styles.uniSub} href={"https://www.uni-due.de/"} target={"blank"}>
-                                    University of Duisburg-Essen
-                                </a>
-
-                            </div>
-                            <div>
-                                <SchoolIcon fontSize="large" style={styles.uniIcon}/> <span style={styles.uni}> B.Sc. in Informatics Engineering, 2016</span>
-                                <br/>
-                                <a style={styles.uniSub} href={"https://www.aiu.edu.sy/"} target={"blank"}>
-                                    Arab International University
-                                </a>
-                            </div>
+                            {educationData.map(institute =>
+                                <div>
+                                    <SchoolIcon fontSize="large" style={styles.uniIcon}/> <span
+                                    style={styles.uni}> {institute.certificate}</span>
+                                    <br/>
+                                    <a style={styles.uniSub} href={institute.instituteUrl} target={"blank"}>
+                                        {institute.institute}
+                                    </a>
+                                </div>
+                            )}
                         </div>
 
                     </Grid>
