@@ -315,5 +315,31 @@
     ],
     "heroImage": "tarani.png",
     "images": []
+  },
+  {
+    "projectName": "Der Die Das",
+    "shortDesc": "Show \"Der Die Das\" menu in every app",
+    "HtmlDesc": null,
+    "mdDesc": "der_die_das.md",
+    "company": "Personal Project",
+    "companyUrl": "",
+    "platforms": [
+      "Android"
+    ],
+    "duration": "",
+    "tags": [
+      "Android",
+      "Kotlin",
+      "HTML Parser",
+      "MVP",
+      "Git"
+    ],
+    "filters": [
+      "all",
+      "personal",
+      "mobile"
+    ],
+    "heroImage": "der_die_das_icon.png",
+    "images": []
   }
 ]

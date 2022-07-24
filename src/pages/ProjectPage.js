@@ -8,14 +8,23 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import MobileAppBarProjectPage from "./MobileAppBarProjectPage";
+import Markdown from "markdown-to-jsx";
 
 function ProjectPage() {
 
     const projectsDate = ProjectsData
     let {name} = useParams();
+    const [projectDesc, setProjectDesc] = React.useState("")
+    const currentProject = projectsDate.filter(project => project.projectName === name)[0];
 
     React.useEffect(() => {
-        window.scrollTo(0, 0) // scroll to top when loading the page
+        window.scrollTo(0, 0) // scroll to top when loading the
+        fetch(process.env.PUBLIC_URL + "/markdown/" + currentProject.mdDesc)
+            .then((r) => r.text())
+            .then(text => {
+                setProjectDesc(text);
+            })
+
     }, []);
 
     const styles = {
@@ -67,8 +76,13 @@ function ProjectPage() {
         }
     };
 
-    const getProject = projectsDate.filter(project => project.projectName === name)[0];
-
+    function getContent() {
+        if (currentProject.HtmlDesc == null)
+            return <Markdown>
+                {projectDesc}
+            </Markdown>
+        return <div style={styles.desc} dangerouslySetInnerHTML={{__html: currentProject.HtmlDesc}}/>;
+    }
 
     return (
         <div style={styles.background} className={"fontStyle"}>
@@ -138,14 +152,14 @@ function ProjectPage() {
             <Container style={styles.projectContent} maxWidth="sm">
 
                 <img style={styles.heroImage}
-                     src={process.env.PUBLIC_URL + "/images/projects/" + getProject.heroImage}
+                     src={process.env.PUBLIC_URL + "/images/projects/" + currentProject.heroImage}
                      alt={"mobile icon"}/>
 
-                <div style={styles.title}>{getProject.projectName}</div>
-                <a style={styles.company} href={getProject.companyUrl}
+                <div style={styles.title}>{currentProject.projectName}</div>
+                <a style={styles.company} href={currentProject.companyUrl}
                    target={"blank"}>
-                    <div>{getProject.company}</div>
-                    <div>{getProject.duration}</div>
+                    <div>{currentProject.company}</div>
+                    <div>{currentProject.duration}</div>
                 </a>
 
 
@@ -154,7 +168,7 @@ function ProjectPage() {
                     <div style={styles.tagsTitle}>
                         Platforms:
                     </div>
-                    {getProject.platforms.map(tag => (
+                    {currentProject.platforms.map(tag => (
 
                         <Button style={styles.tags} variant="contained" disabled>
                             {tag}
@@ -164,7 +178,7 @@ function ProjectPage() {
 
                 </div>
 
-                <div style={styles.desc} dangerouslySetInnerHTML={{__html: getProject.HtmlDesc}}/>
+                {getContent()}
 
 
                 <div style={styles.tagsContainer}>
@@ -172,7 +186,7 @@ function ProjectPage() {
                     <div style={styles.tagsTitle}>
                         Used methods and tools:
                     </div>
-                    {getProject.tags.map(tag => (
+                    {currentProject.tags.map(tag => (
 
                         <Button style={styles.tags} variant="contained" disabled>
                             {tag}
