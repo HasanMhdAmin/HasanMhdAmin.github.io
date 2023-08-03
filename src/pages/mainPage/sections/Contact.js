@@ -40,7 +40,7 @@ function Contact() {
 
     const email = () => {
         if (mainConfig.contact.email != null)
-            return <Grid item lg={3}>
+            return <Grid item lg={2}>
                 <div style={styles.item}>
                     <a href={"mailto:" + mainConfig.contact.email} target="_blank">
                         <EmailIcon color="primary" style={{fontSize: 50}}/>
@@ -53,7 +53,7 @@ function Contact() {
 
     const linkedin = () => {
         if (mainConfig.contact.linkedin != null)
-            return <Grid item lg={3}>
+            return <Grid item lg={2}>
                 <a href={mainConfig.contact.linkedin} target="_blank">
                     <LinkedInIcon color="primary" style={{fontSize: 50}}/>
                 </a>
@@ -62,9 +62,20 @@ function Contact() {
             return <div/>
     };
 
+    const xing = () => {
+        if (mainConfig.contact.linkedin != null)
+            return <Grid item lg={2}>
+                <a href={mainConfig.contact.xing} target="_blank">
+                    <img src="/images/xing.svg" width="50" height="50" alt="xing icon"/>
+                </a>
+            </Grid>
+        else
+            return <div/>
+    };
+
     const github = () => {
         if (mainConfig.contact.github != null)
-            return <Grid item lg={3}>
+            return <Grid item lg={2}>
                 <a href={mainConfig.contact.github} target="_blank">
                     <GitHubIcon color="primary" style={{fontSize: 50}}/>
                 </a>
@@ -75,7 +86,7 @@ function Contact() {
 
     const skype = () => {
         if (mainConfig.contact.skype != null)
-            return <Grid item lg={3}>
+            return <Grid item lg={2}>
                 <a href={mainConfig.contact.skype} target="_blank">
                     <img style={{width: 50}} src={process.env.PUBLIC_URL + "/images/skype.svg"}
                          alt={"skype icon"}/>
@@ -115,13 +126,14 @@ function Contact() {
                 <div id="contact" style={styles.background} className={"fontStyle"}>
                     <Container maxWidth="sm">
                         <div className={"fontStyle"} style={styles.title}>
-                            <h1 className={"subheading"}>Contact</h1>
+                            <h1 className={"subheading"}>Find me on</h1>
                         </div>
 
-                        <Grid container spacing={3}>
+                        <Grid container spacing={3} alignItems="center" justify="center">
 
                             {email()}
                             {linkedin()}
+                            {xing()}
                             {github()}
                             {skype()}
                             {instagram()}
