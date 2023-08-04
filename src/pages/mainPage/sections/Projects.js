@@ -88,7 +88,12 @@ function Projects() {
             minHeight: 70
         },
         cardIcon: {
-            maxWidth: 25
+            maxWidth: 50,
+            maxHeight: 25
+        },
+        companyLogo: {
+            marginLeft: "auto",
+            marginRight: 0,
         },
         mobileFix: {
             marginTop: "0px !important"
@@ -118,7 +123,7 @@ function Projects() {
                         </div>
                     </Grid>
                     <Grid item md={8} xs={12}
-                          // style={styles.contentSection}
+                        // style={styles.contentSection}
                     >
                         <div className={"fontStyle"}>
 
@@ -214,6 +219,17 @@ function Projects() {
                                                        alt={"web icon"}/>
                                                 : ""
                                             }
+
+                                            <div style={styles.companyLogo}>
+                                                {project.companyLogo != null ?
+                                                    <img
+                                                        style={styles.cardIcon}
+                                                        title={project.company}
+                                                        src={process.env.PUBLIC_URL + project.companyLogo}
+                                                        alt={"mobile icon"}/>
+                                                    : ""
+                                                }
+                                            </div>
 
                                         </CardActions>
                                     </Card>
