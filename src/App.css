@@ -1,5 +1,10 @@
 .fontStyle {
-    font-family: 'Baloo Paaji 2', cursive;
+    font-family: 'Baloo Paaji 2', system-ui;
+}
+
+.MuiButton-label {
+    font-family: 'Baloo Paaji 2', system-ui;
+    font-size: initial;
 }
 
 .heading {

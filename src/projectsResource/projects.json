@@ -262,7 +262,8 @@
       "mobile"
     ],
     "heroImage": "syria-ad.png",
-    "images": []
+    "images": [],
+    "visible": false
   },
   {
     "projectName": "Smart Learning",

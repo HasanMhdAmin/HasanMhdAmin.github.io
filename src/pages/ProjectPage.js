@@ -9,6 +9,7 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import MobileAppBarProjectPage from "./MobileAppBarProjectPage";
 import Markdown from "markdown-to-jsx";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 function ProjectPage() {
 
@@ -37,10 +38,11 @@ function ProjectPage() {
             marginLeft: 30
         },
         projectContent: {
-            marginTop: 100
+            marginTop: 70
         },
         heroImage: {
-            width: "inherit"
+            width: "inherit",
+            marginTop: 20
         },
         title: {
             fontSize: 30,
@@ -151,6 +153,13 @@ function ProjectPage() {
 
             <Container style={styles.projectContent} maxWidth="sm">
 
+                <Button color="primary"  startIcon={<ArrowBackIcon/>} onClick={() => {
+                    let url = window.location.protocol + "//" + window.location.host + "#/home/projects";
+                    window.location.replace(url);
+                }}>
+                    Projects
+                </Button>
+
                 <img style={styles.heroImage}
                      src={process.env.PUBLIC_URL + "/images/projects/" + currentProject.heroImage}
                      alt={"mobile icon"}/>
@@ -179,7 +188,6 @@ function ProjectPage() {
                 </div>
 
                 {getContent()}
-
 
                 <div style={styles.tagsContainer}>
 

@@ -184,7 +184,7 @@ function Projects() {
                             style={styles.projectsSection}
                         >
 
-                            {projectsDate.filter(pr => pr.filters.includes(filterValue)).map(project => (
+                            {projectsDate.filter(pr => pr.filters.includes(filterValue) && pr.visible !== false).map(project => (
                                 <Grid item xs={12} sm={6} md={4} key={projectsDate.indexOf(project)}>
                                     <Card style={styles.card}>
                                         <CardActionArea onClick={event => {
