@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../../App.css';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import SchoolIcon from '@material-ui/icons/School';
+import Grid from "@mui/material/Grid";
+import SchoolIcon from '@mui/icons-material/School';
 import EducationData from '../../../projectsResource/education';
+import Container from "@mui/material/Container";
 
 function Education() {
     const educationData = EducationData

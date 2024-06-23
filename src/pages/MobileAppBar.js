@@ -1,30 +1,29 @@
 import React from 'react';
 import '../App.css';
-import Button from "@material-ui/core/Button";
-
-
-import {makeStyles} from '@material-ui/core/styles';
+import Button from "@mui/material/Button";
+import {makeStyles} from '@mui/styles';
 import clsx from "clsx";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 import {Link} from "react-scroll";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Box from "@material-ui/core/Box";
-import Drawer from "@material-ui/core/Drawer";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 
-const useStyles = makeStyles({
-    list: {
-        width: 250,
-    },
-    fullList: {
-        width: 'auto',
-    },
-});
 
 function MobileAppBar() {
+    const useStyles = makeStyles({
+        list: {
+            width: 250,
+        },
+        fullList: {
+            width: 'auto',
+        },
+    });
+
     const classes = useStyles();
     const [state, setState] = React.useState({
         top: false,

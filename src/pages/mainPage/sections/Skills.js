@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../../App.css';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
 import AOS from 'aos';
 import SkillsData from '../../../projectsResource/skills';
 

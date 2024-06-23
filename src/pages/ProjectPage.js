@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App.css';
-import Container from "@material-ui/core/Container";
+import Container from "@mui/material/Container";
 import ProjectsData from '../projectsResource/projects';
 import {useParams} from 'react-router-dom'
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import MobileAppBarProjectPage from "./MobileAppBarProjectPage";
 import Markdown from "markdown-to-jsx";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function ProjectPage() {
 

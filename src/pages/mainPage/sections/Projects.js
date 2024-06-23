@@ -1,33 +1,23 @@
 import React from 'react';
 import '../../../App.css';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
 import ProjectsData from '../../../projectsResource/projects';
 import AOS from 'aos';
-import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
-import {makeStyles} from "@material-ui/core/styles";
-import {withStyles} from "@material-ui/core";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import Paper from "@material-ui/core/Paper";
-import ToggleButton from "@material-ui/lab/ToggleButton";
+import ToggleButtonGroup from "@mui/lab/ToggleButtonGroup";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Paper from "@mui/material/Paper";
+import ToggleButton from "@mui/lab/ToggleButton";
+import {makeStyles, withStyles} from "@mui/styles";
 
-
-const useStyles = makeStyles((theme) => ({
-
-    divider: {
-        margin: theme.spacing(1, 0.5),
-    },
-    overflow: "auto",
-    whiteSpace: "nowrap",
-}));
 
 const StyledToggleButtonGroup = withStyles((theme) => ({
     grouped: {
@@ -45,7 +35,7 @@ const StyledToggleButtonGroup = withStyles((theme) => ({
 
 function Projects() {
     AOS.init();
-    const classes = useStyles();
+
     const [filterValue, setFilterValue] = React.useState("all");
 
     const projectsDate = ProjectsData
