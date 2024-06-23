@@ -121,7 +121,6 @@ function Contact() {
     return (
 
         <div className={"footer"}>
-
             <div className={"footerContent"}>
                 <div id="contact" style={styles.background} className={"fontStyle"}>
                     <Container maxWidth="sm">
@@ -129,7 +128,7 @@ function Contact() {
                             <h1 className={"subheading"}>Find me on</h1>
                         </div>
 
-                        <Grid container spacing={3} alignItems="center" justify="center">
+                        <Grid container spacing={3} alignItems="center" justifyContent="center">
 
                             {email()}
                             {linkedin()}
@@ -144,10 +143,7 @@ function Contact() {
 
                     </Container>
                 </div>
-
             </div>
-
-
         </div>
 
 
