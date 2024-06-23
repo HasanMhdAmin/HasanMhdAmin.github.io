@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../../App.css';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import EmailIcon from '@material-ui/icons/Email';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import MainConfig from '../../../projectsResource/main_config';
 
 

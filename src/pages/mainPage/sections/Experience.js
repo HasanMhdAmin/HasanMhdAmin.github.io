@@ -1,33 +1,35 @@
 import React from 'react';
 import '../../../App.css';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import AOS from 'aos';
 import ExperienceData from '../../../projectsResource/experience';
 
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles} from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        padding: '20px 20px',
-        marginTop: "10px",
-    },
-    secondaryTail: {
-        backgroundColor: theme.palette.secondary.main,
-    },
-}));
+import {
+    Timeline,
+    TimelineConnector, TimelineContent,
+    TimelineDot,
+    TimelineItem,
+    TimelineOppositeContent,
+    TimelineSeparator
+} from "@mui/lab";
 
 function Experience() {
+    const useStyles = makeStyles((theme) => ({
+        paper: {
+            padding: '20px 20px',
+            marginTop: "10px",
+        },
+        secondaryTail: {
+            backgroundColor: theme.palette.secondary.main,
+        },
+    }));
+
     AOS.init();
     const experienceData = ExperienceData
     const classes = useStyles();

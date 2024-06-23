@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import {createMuiTheme, MuiThemeProvider} from "@material-ui/core";
-import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/mainPage/Home";
 import ProjectPage from "./pages/ProjectPage";
 import MainConfig from './projectsResource/main_config';
+import {createTheme, ThemeProvider} from "@mui/material";
 
 function App() {
     const mainConfig = MainConfig
 
-    const theme = createMuiTheme({
+    const theme = createTheme({
         palette: {
             primary: {main: mainConfig.color},
             secondary: {main: '#757575'},
@@ -34,15 +34,15 @@ function App() {
 
     return (
       <div >
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <HashRouter basename={process.env.PUBLIC_URL}>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/home/:section" component={Home} />
-              <Route exact path="/project/:name" component={ProjectPage}/>
-            </Switch>
+            <Routes>
+              <Route exact path="/" element={<Home/>} />
+              <Route exact path="/home/:section" element={<Home/>} />
+              <Route exact path="/project/:name" element={<ProjectPage/>}/>
+            </Routes>
           </HashRouter>
-        </MuiThemeProvider>
+        </ThemeProvider>
       </div>
     // <div className="App">
     //   <header className="App-header">
