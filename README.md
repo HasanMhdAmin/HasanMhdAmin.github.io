@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hasan Mhd Amin - Portfolio Website
 
-## Available Scripts
+Welcome to the source repository for my personal portfolio website! This project is a living showcase of my professional experience, skills, open-source projects, and technical biography as a Software Engineer and Android/Full Stack Developer.
 
-In the project directory, you can run:
+You can view the live site here: **[https://itshasan.de](https://itshasan.de)**
 
-### `yarn start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠 Tech Stack
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **React.js** (Bootstrapped with Create React App)
+- **Material-UI (MUI)** for the core component library
+- **AOS** for scroll animations
+- Custom CSS styling and responsive layouts
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `yarn build`
+If you want to run this project locally, fork the repository, or modify the codebase, follow these instructions:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (which comes with `npm`) installed on your machine.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### 1. Install Dependencies
+Navigate to the project directory and install the required modules:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+# or
+yarn install
+```
 
-### `yarn eject`
+### 2. Run the Development Server
+To start the app in development mode with hot-reloading:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm start
+# or
+yarn start
+```
+Open **[http://localhost:3000](http://localhost:3000)** to view it in the browser. The page will reload if you make any edits.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🏗 Build & Release
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+When you are ready to publish new changes to the live website, the process is simple thanks to the `gh-pages` package.
 
-## Learn More
+### 1. Build for Production
+To create an optimized production build of the website:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+# or
+yarn build
+```
+This builds the app into the `build` folder, optimizing React and minifying the bundle for the best performance.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Deploy to GitHub Pages (Live Site)
+To automatically build and push the updated code straight to the `gh-pages` branch (which updates `itshasan.de`):
 
-### Code Splitting
+```bash
+npm run deploy
+```
+*(Note: The `deploy` script automatically runs the `build` script first, so you technically only need to run `npm run deploy` to handle both steps).*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+---
 
-### Analyzing the Bundle Size
+## 📂 Project Structure
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Most of the content you will want to update is located inside the `src/projectsResource` folder. These JSON and JS files act as a simple internal database for the site:
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **`main_config.json`**: Update your name, headline, profile image, CV link, and social media URLs.
+- **`experience.js`**: Update your professional journey and timeline.
+- **`projects.json`**: Add or remove portfolio projects.
+- **`skills.js`**: Update your technical stack and skill list.

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import '../../../App.css';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -16,7 +16,8 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Paper from "@mui/material/Paper";
 import ToggleButton from "@mui/lab/ToggleButton";
-import {makeStyles, withStyles} from "@mui/styles";
+import Masonry from "@mui/lab/Masonry";
+import { makeStyles, withStyles } from "@mui/styles";
 
 
 const StyledToggleButtonGroup = withStyles((theme) => ({
@@ -107,14 +108,14 @@ function Projects() {
                     <Grid item md={4}>
 
                         <div className={"fontStyle"}
-                             style={styles.titleSection}>
+                            style={styles.titleSection}>
 
                             <h1 className={"subheading"}>Projects</h1>
 
                         </div>
                     </Grid>
                     <Grid item md={8} xs={12}
-                        // style={styles.contentSection}
+                    // style={styles.contentSection}
                     >
                         <div className={"fontStyle"}>
 
@@ -148,8 +149,8 @@ function Projects() {
                             </Paper>
 
                             <FormControl style={styles.mobileFix}
-                                         id="mobile"
-                                         variant="outlined">
+                                id="mobile"
+                                variant="outlined">
                                 <InputLabel id="demo-simple-select-outlined-label">Category</InputLabel>
                                 <Select
                                     value={filterValue}
@@ -166,17 +167,14 @@ function Projects() {
 
                         </div>
 
-                        <Grid
-                            container
+                        <Masonry
+                            columns={{ xs: 1, sm: 2, md: 3 }}
                             spacing={2}
-                            direction="row"
-                            justify="flex-start"
-                            alignItems="flex-start"
                             style={styles.projectsSection}
                         >
 
                             {projectsDate.filter(pr => pr.filters.includes(filterValue) && pr.visible !== false).map(project => (
-                                <Grid item xs={12} sm={6} md={4} key={projectsDate.indexOf(project)}>
+                                <div key={projectsDate.indexOf(project)}>
                                     <Card className="project-card" style={styles.card}>
                                         <CardActionArea onClick={event => {
                                             let url = window.location.protocol + "//" + window.location.host + "#" + "/project/" + project.projectName;
@@ -200,14 +198,14 @@ function Projects() {
 
                                             {project.filters.includes("mobile")
                                                 ? <img style={styles.cardIcon}
-                                                       src={process.env.PUBLIC_URL + "/images/mobile.svg"}
-                                                       alt={"mobile icon"}/>
+                                                    src={process.env.PUBLIC_URL + "/images/mobile.svg"}
+                                                    alt={"mobile icon"} />
                                                 : ""
                                             }
                                             {project.filters.includes("web")
                                                 ? <img style={styles.cardIcon}
-                                                       src={process.env.PUBLIC_URL + "/images/web.svg"}
-                                                       alt={"web icon"}/>
+                                                    src={process.env.PUBLIC_URL + "/images/web.svg"}
+                                                    alt={"web icon"} />
                                                 : ""
                                             }
 
@@ -217,16 +215,16 @@ function Projects() {
                                                         style={styles.cardIcon}
                                                         title={project.company}
                                                         src={process.env.PUBLIC_URL + project.companyLogo}
-                                                        alt={"mobile icon"}/>
+                                                        alt={"mobile icon"} />
                                                     : ""
                                                 }
                                             </div>
 
                                         </CardActions>
                                     </Card>
-                                </Grid>
+                                </div>
                             ))}
-                        </Grid>
+                        </Masonry>
 
                     </Grid>
                 </Grid>
