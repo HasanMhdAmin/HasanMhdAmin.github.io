@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../../../App.css';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -34,7 +34,8 @@ const StyledToggleButtonGroup = withStyles((theme) => ({
 }))(ToggleButtonGroup);
 
 function Projects() {
-    AOS.init();
+    useEffect(() => { AOS.init(); }, []);
+
 
     const [filterValue, setFilterValue] = React.useState("all");
 
@@ -61,7 +62,7 @@ function Projects() {
         },
         card: {},
         media: {
-            height: 140,
+            height: 180,
         },
         paper: {
             display: "inline-block",
@@ -176,7 +177,7 @@ function Projects() {
 
                             {projectsDate.filter(pr => pr.filters.includes(filterValue) && pr.visible !== false).map(project => (
                                 <Grid item xs={12} sm={6} md={4} key={projectsDate.indexOf(project)}>
-                                    <Card style={styles.card}>
+                                    <Card className="project-card" style={styles.card}>
                                         <CardActionArea onClick={event => {
                                             let url = window.location.protocol + "//" + window.location.host + "#" + "/project/" + project.projectName;
                                             window.location.replace(url);

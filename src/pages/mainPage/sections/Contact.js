@@ -14,7 +14,7 @@ function Contact() {
 
     const styles = {
         background: {
-            paddingTop: 70,
+            paddingTop: 80,
             backgroundColor: "#eeeeee",
             paddingBottom: 50
         },
@@ -43,79 +43,79 @@ function Contact() {
             return <Grid item lg={2}>
                 <div style={styles.item}>
                     <a href={"mailto:" + mainConfig.contact.email} target="_blank">
-                        <EmailIcon color="primary" style={{fontSize: 50}}/>
+                        <EmailIcon color="primary" style={{ fontSize: 50 }} />
                     </a>
                 </div>
             </Grid>
         else
-            return <div/>
+            return <div />
     };
 
     const linkedin = () => {
         if (mainConfig.contact.linkedin != null)
             return <Grid item lg={2}>
                 <a href={mainConfig.contact.linkedin} target="_blank">
-                    <LinkedInIcon color="primary" style={{fontSize: 50}}/>
+                    <LinkedInIcon color="primary" style={{ fontSize: 50 }} />
                 </a>
             </Grid>
         else
-            return <div/>
+            return <div />
     };
 
     const xing = () => {
         if (mainConfig.contact.linkedin != null)
             return <Grid item lg={2}>
                 <a href={mainConfig.contact.xing} target="_blank">
-                    <img src="/images/xing.svg" width="50" height="50" alt="xing icon"/>
+                    <img src="/images/xing.svg" width="50" height="50" alt="xing icon" />
                 </a>
             </Grid>
         else
-            return <div/>
+            return <div />
     };
 
     const github = () => {
         if (mainConfig.contact.github != null)
             return <Grid item lg={2}>
                 <a href={mainConfig.contact.github} target="_blank">
-                    <GitHubIcon color="primary" style={{fontSize: 50}}/>
+                    <GitHubIcon color="primary" style={{ fontSize: 50 }} />
                 </a>
             </Grid>
         else
-            return <div/>
+            return <div />
     };
 
     const skype = () => {
         if (mainConfig.contact.skype != null)
             return <Grid item lg={2}>
                 <a href={mainConfig.contact.skype} target="_blank">
-                    <img style={{width: 50}} src={process.env.PUBLIC_URL + "/images/skype.svg"}
-                         alt={"skype icon"}/>
+                    <img style={{ width: 50 }} src={process.env.PUBLIC_URL + "/images/skype.svg"}
+                        alt={"skype icon"} />
                 </a>
             </Grid>
         else
-            return <div/>
+            return <div />
     };
 
     const instagram = () => {
         if (mainConfig.contact.instagram != null)
             return <Grid item lg={2}>
                 <a href={mainConfig.contact.instagram} target="_blank">
-                    <InstagramIcon color="primary" style={{fontSize: 50}}/>
+                    <InstagramIcon color="primary" style={{ fontSize: 50 }} />
                 </a>
             </Grid>
         else
-            return <div/>
+            return <div />
     };
 
     const footer = () => {
         if (mainConfig.showFooter)
             return <div style={styles.footer}>
                 Developed️ by <a style={styles.hasanName} href="https://itshasan.de">me</a> using <a
-                style={styles.hasanName} href="https://reactjs.org/"
-                target="_blank">ReactJs</a>
+                    style={styles.hasanName} href="https://reactjs.org/"
+                    target="_blank">ReactJs</a>
             </div>
         else
-            return <div/>
+            return <div />
     };
 
     return (

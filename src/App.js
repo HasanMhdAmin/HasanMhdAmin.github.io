@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import {HashRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/mainPage/Home";
 import ProjectPage from "./pages/ProjectPage";
 import MainConfig from './projectsResource/main_config';
 import {createTheme, ThemeProvider} from "@mui/material";
+import AOS from 'aos';
 
 function App() {
     const mainConfig = MainConfig
+
+    useEffect(() => {
+        AOS.init({ once: true, duration: 800 });
+    }, []);
 
     const theme = createTheme({
         palette: {

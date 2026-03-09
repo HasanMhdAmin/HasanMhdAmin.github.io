@@ -1,9 +1,9 @@
 .fontStyle {
-    font-family: 'Baloo Paaji 2', system-ui;
+    font-family: 'Inter', 'Baloo Paaji 2', system-ui;
 }
 
 .MuiButton-label {
-    font-family: 'Baloo Paaji 2', system-ui;
+    font-family: 'Inter', 'Baloo Paaji 2', system-ui;
     font-size: initial;
 }
 
@@ -22,15 +22,17 @@
 #landscapeFlex {
     display: flex !important;
 }
+
 #mobile {
     display: none;
 }
 
-/* On screens that are 600px wide or less, the background color is olive */
+/* On screens that are 600px wide or less */
 @media screen and (max-width: 600px) {
     #landscape {
         display: none !important;
     }
+
     #landscapeFlex {
         display: none !important;
     }
@@ -49,46 +51,127 @@
     text-align: center;
 }
 
-.footerContent {
-    /*position: relative;*/
-    /*top: 23%;*/
+/* ─── Profile Avatar Ring ─── */
+.avatar-ring {
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0a549f 0%, #4a90e2 100%);
+    display: inline-block;
+    box-shadow: 0 8px 32px rgba(10, 84, 159, 0.25);
+    transition: box-shadow 0.3s ease;
+}
+
+.avatar-ring:hover {
+    box-shadow: 0 12px 40px rgba(10, 84, 159, 0.45);
+}
+
+/* ─── Social Icon Links ─── */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background-color: rgba(10, 84, 159, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ─── Project Card Hover ─── */
+.project-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+.project-card .MuiCardMedia-root {
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .MuiCardMedia-root {
+    transform: scale(1.06);
+}
+
+/* ─── Experience Card Accent ─── */
+.experience-paper {
+    border-left: 4px solid #0a549f !important;
+    transition: box-shadow 0.25s ease;
+}
+
+.experience-paper:hover {
+    box-shadow: 0 8px 24px rgba(10, 84, 159, 0.12) !important;
+}
+
+/* ─── Hero Gradient ─── */
+.hero-header {
+    background: linear-gradient(160deg, #eef4fb 0%, #ffffff 60%);
 }
 
 .App {
     text-align: center;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
+/* ─── Infinite Marquee ─── */
+.marquee-container {
     display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: scrollLeft 35s linear infinite;
 }
 
-.App-link {
-    color: #61dafb;
+.marquee-content.reverse {
+    animation: scrollRight 35s linear infinite;
 }
 
-@keyframes App-logo-spin {
+@keyframes scrollLeft {
     from {
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
+
     to {
-        transform: rotate(360deg);
+        transform: translateX(-100%);
     }
+}
+
+@keyframes scrollRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.marquee-item {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 800;
+    padding: 0 2rem;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(10, 84, 159, 0.4);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.marquee-item.solid {
+    -webkit-text-stroke: 0;
+    color: rgba(10, 84, 159, 0.6);
 }

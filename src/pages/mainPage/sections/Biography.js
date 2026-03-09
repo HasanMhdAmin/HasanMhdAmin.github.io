@@ -35,29 +35,31 @@ function Biography() {
         cvHeader: {
             paddingBottom: 50,
             paddingTop: 100,
-            backgroundColor: "#ffffff"
         },
         userAvatar: {
             margin: "auto",
-            width: 270,
-            height: 270,
+            width: 262,
+            height: 262,
         },
         profileSection: {
             marginLeft: "auto",
             marginRight: "auto",
             textAlign: 'center',
-
         },
         profileName: {
             fontSize: 40,
-            marginTop: 10
+            marginTop: 14,
+            fontWeight: 700,
         },
         profileExperience: {
             fontSize: 20,
             marginBottom: 20,
+            color: '#555',
+            fontWeight: 300,
         },
         biography: {
             fontSize: 18,
+            lineHeight: 1.7,
         },
         cvLink: {
             textDecoration: "none",
@@ -65,12 +67,18 @@ function Biography() {
         detailedCV: {
             marginLeft: 18
         },
+        ctaRow: {
+            marginTop: 28,
+            display: 'flex',
+            gap: 16,
+            flexWrap: 'wrap',
+        },
     };
 
     const email = () => {
         if (mainConfig.contact.email != null)
-            return <a href={"mailto:" + mainConfig.contact.email} target="_blank">
-                <EmailIcon color="primary" style={{fontSize: 50}}/>
+            return <a className="social-link" href={"mailto:" + mainConfig.contact.email} target="_blank" rel="noreferrer">
+                <EmailIcon color="primary" style={{fontSize: 46}}/>
             </a>
         else
             return <div/>
@@ -78,8 +86,8 @@ function Biography() {
 
     const linkedin = () => {
         if (mainConfig.contact.linkedin != null)
-            return <a href={mainConfig.contact.linkedin} target="_blank">
-                <LinkedInIcon color="primary" style={{fontSize: 50}}/>
+            return <a className="social-link" href={mainConfig.contact.linkedin} target="_blank" rel="noreferrer">
+                <LinkedInIcon color="primary" style={{fontSize: 46}}/>
             </a>
         else
             return <div/>
@@ -87,8 +95,8 @@ function Biography() {
 
     const github = () => {
         if (mainConfig.contact.github != null)
-            return <a href={mainConfig.contact.github} target="_blank">
-                <GitHubIcon color="primary" style={{fontSize: 40, margin: 5}}/>
+            return <a className="social-link" href={mainConfig.contact.github} target="_blank" rel="noreferrer">
+                <GitHubIcon color="primary" style={{fontSize: 40}}/>
             </a>
         else
             return <div/>
@@ -152,15 +160,17 @@ function Biography() {
 
             <MobileAppBar/>
 
-            <header style={styles.cvHeader}>
+            <header style={styles.cvHeader} className="hero-header">
                 <Container maxWidth="lg">
-                    <Grid container spacing={3}>
+                    <Grid container spacing={4}>
                         <Grid item sm={4} xs={12}>
                             <div style={styles.profileSection}>
                                 <div>
-                                    <Avatar alt={mainConfig.name + " photo"}
-                                            src={process.env.PUBLIC_URL + mainConfig.picture}
-                                            style={styles.userAvatar}/>
+                                    <div className="avatar-ring" style={{display: 'inline-block'}}>
+                                        <Avatar alt={mainConfig.name + " photo"}
+                                                src={process.env.PUBLIC_URL + mainConfig.picture}
+                                                style={styles.userAvatar}/>
+                                    </div>
 
                                     <div className={"fontStyle heading"}
                                          style={styles.profileName}>{mainConfig.name}</div>
@@ -168,9 +178,11 @@ function Biography() {
                                         <div dangerouslySetInnerHTML={{__html: mainConfig.headline}}/>
                                     </div>
 
-                                    {email()}
-                                    {linkedin()}
-                                    {github()}
+                                    <div>
+                                        {email()}
+                                        {linkedin()}
+                                        {github()}
+                                    </div>
 
                                 </div>
                             </div>
@@ -181,18 +193,21 @@ function Biography() {
                                 <div dangerouslySetInnerHTML={{__html: biographyData.biography}}/>
                             </div>
 
-                            <a style={styles.cvLink}
-                               href={mainConfig.cvUrl}
-                               target="_blank">
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="large"
-                                    startIcon={<GetAppIcon/>}
-                                >
-                                    Download C.V.
-                                </Button>
-                            </a>
+                            <div style={styles.ctaRow}>
+                                <a style={styles.cvLink}
+                                   href={mainConfig.cvUrl}
+                                   target="_blank"
+                                   rel="noreferrer">
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        size="large"
+                                        startIcon={<GetAppIcon/>}
+                                    >
+                                        Download C.V.
+                                    </Button>
+                                </a>
+                            </div>
 
                         </Grid>
                     </Grid>

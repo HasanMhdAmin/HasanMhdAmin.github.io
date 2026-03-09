@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../../../App.css';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -30,7 +30,7 @@ function Experience() {
         },
     }));
 
-    AOS.init();
+    useEffect(() => { AOS.init(); }, []);
     const experienceData = ExperienceData
     const classes = useStyles();
 
@@ -51,14 +51,15 @@ function Experience() {
             // marginTop: 50
         },
         jobTitle: {
-            fontSize: 30,
-            lineHeight: 1,
+            fontSize: 24,
+            lineHeight: 1.2,
+            fontWeight: 600,
         },
         company: {
-            fontSize: 20,
-            marginTop: 7,
+            fontSize: 16,
+            marginTop: 6,
             lineHeight: 1.5,
-            color: "#8c8c8c",
+            color: "#6e6e6e",
             textDecoration: "none",
         },
         uniIcon: {
@@ -83,7 +84,7 @@ function Experience() {
 
     function getExperiences() {
         return experienceData.map(experience => (
-            <Paper elevation={3} className={classes.paper}>
+            <Paper elevation={3} className={`${classes.paper} experience-paper`}>
 
                 <Grid container spacing={3}>
                     <Grid item xs={10}>
