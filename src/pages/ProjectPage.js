@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import Container from "@mui/material/Container";
 import ProjectsData from '../projectsResource/projects';
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -10,12 +10,14 @@ import Button from "@mui/material/Button";
 import MobileAppBarProjectPage from "./MobileAppBarProjectPage";
 import Markdown from "markdown-to-jsx";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Dialog from "@mui/material/Dialog";
 
 function ProjectPage() {
 
     const projectsDate = ProjectsData
-    let {name} = useParams();
+    let { name } = useParams();
     const [projectDesc, setProjectDesc] = React.useState("")
+    const [openLightbox, setOpenLightbox] = React.useState(false);
     const currentProject = projectsDate.filter(project => project.projectName === name)[0];
 
     React.useEffect(() => {
@@ -42,7 +44,9 @@ function ProjectPage() {
         },
         heroImage: {
             width: "inherit",
-            marginTop: 20
+            marginTop: 20,
+            cursor: "pointer",
+            transition: "transform 0.2s ease-in-out"
         },
         title: {
             fontSize: 30,
@@ -83,7 +87,7 @@ function ProjectPage() {
             return <Markdown>
                 {projectDesc}
             </Markdown>
-        return <div style={styles.desc} dangerouslySetInnerHTML={{__html: currentProject.HtmlDesc}}/>;
+        return <div style={styles.desc} dangerouslySetInnerHTML={{ __html: currentProject.HtmlDesc }} />;
     }
 
     return (
@@ -149,11 +153,11 @@ function ProjectPage() {
 
             </AppBar>
 
-            <MobileAppBarProjectPage/>
+            <MobileAppBarProjectPage />
 
             <Container style={styles.projectContent} maxWidth="sm">
 
-                <Button color="primary"  startIcon={<ArrowBackIcon/>} onClick={() => {
+                <Button color="primary" startIcon={<ArrowBackIcon />} onClick={() => {
                     let url = window.location.protocol + "//" + window.location.host + "#/home/projects";
                     window.location.replace(url);
                 }}>
@@ -161,12 +165,28 @@ function ProjectPage() {
                 </Button>
 
                 <img style={styles.heroImage}
-                     src={process.env.PUBLIC_URL + "/images/projects/" + currentProject.heroImage}
-                     alt={"mobile icon"}/>
+                    src={process.env.PUBLIC_URL + "/images/projects/" + currentProject.heroImage}
+                    alt={"project hero"}
+                    onClick={() => setOpenLightbox(true)}
+                    title="Click to enlarge"
+                />
+
+                <Dialog
+                    open={openLightbox}
+                    onClose={() => setOpenLightbox(false)}
+                    maxWidth="xl"
+                >
+                    <img
+                        src={process.env.PUBLIC_URL + "/images/projects/" + currentProject.heroImage}
+                        alt={"project hero enlarged"}
+                        style={{ width: '100%', height: 'auto', display: 'block' }}
+                        onClick={() => setOpenLightbox(false)}
+                    />
+                </Dialog>
 
                 <div style={styles.title}>{currentProject.projectName}</div>
                 <a style={styles.company} href={currentProject.companyUrl}
-                   target={"blank"}>
+                    target={"blank"}>
                     <div>{currentProject.company}</div>
                     <div>{currentProject.duration}</div>
                 </a>

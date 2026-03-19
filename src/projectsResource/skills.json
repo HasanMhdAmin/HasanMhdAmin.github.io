@@ -17,10 +17,10 @@
       "alt": "Kotlin icon"
     }
   ],
-  "fields" : [
+  "fields": [
     {
       "title": "Mobile Application Technologies",
-      "description": "Android Studio, Java, Kotlin, Flutter, MVVM, Firebase, Room DB, Dagger DI, Create plugins for (Ionic & Cordova), Google Maps, REST, JSON, XML."
+      "description": "Android SDK, Kotlin, Flutter, MVVM, Firebase, Retrofit, Room DB, Hilt DI, Coroutines, Flow, Arrow - Either, Modularization, Google Maps, Flutter."
     },
     {
       "title": "Frontend Technologies",
@@ -28,11 +28,11 @@
     },
     {
       "title": "Backend Technologies",
-      "description": "Spring Boot, ASP.Net Core, webAPI, C#, MSSQL, MySQL, Oracle, SQLite, MS Entity Framework, Hibernate, JPA, LINQ, MongoDB, Postman."
+      "description": "Spring Boot, ASP.Net Core, webAPI, C#, MSSQL, MySQL, Oracle, SQLite, MS Entity Framework, Hibernate, JPA, LINQ, Postman, Swagger."
     },
     {
       "title": "Project management tools",
-      "description": "Git, Jira, Trello, Slack, Agile methodology."
+      "description": "Git, Jira, GitLab CI/CD, Phrase, Contentful, Adjust, Emarsys, Agile methodology, Scrum, Kanban."
     }
   ]
 }

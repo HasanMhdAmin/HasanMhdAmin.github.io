@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import '../../../App.css';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -8,7 +8,7 @@ import ExperienceData from '../../../projectsResource/experience';
 
 import Paper from '@mui/material/Paper';
 
-import {makeStyles} from '@mui/styles';
+import { makeStyles } from '@mui/styles';
 
 import {
     Timeline,
@@ -89,30 +89,32 @@ function Experience() {
                 <Grid container spacing={3}>
                     <Grid item xs={10}>
                         <div style={styles.jobTitle}>
-                            <div dangerouslySetInnerHTML={{__html: experience.jobPosition}}/>
+                            <div dangerouslySetInnerHTML={{ __html: experience.jobPosition }} />
                         </div>
                         <a style={styles.company} href={experience.companyUrl} target={"blank"}>
-                            <div dangerouslySetInnerHTML={{__html: experience.company}}/>
-                            <div dangerouslySetInnerHTML={{__html: experience.duration}}/>
+                            <div dangerouslySetInnerHTML={{ __html: experience.company }} />
+                            <div dangerouslySetInnerHTML={{ __html: experience.duration }} />
                         </a>
                     </Grid>
                     <Grid item xs={2}>
                         <a href={experience.companyUrl} target={"blank"}>
                             <img style={styles.image} src={process.env.PUBLIC_URL + experience.companyImageUrl}
-                                 alt={experience.imageAlt}/>
+                                alt={experience.imageAlt} />
                         </a>
                     </Grid>
                 </Grid>
 
                 <div style={styles.responsibilities}>
                     Responsibilities include:
-                    <div dangerouslySetInnerHTML={{__html: experience.responsibilities}}/>
+                    <div dangerouslySetInnerHTML={{ __html: experience.responsibilities }} />
                 </div>
 
-                <div style={styles.responsibilities}>
-                    <i>Used methods and tools:</i>
-                    <div dangerouslySetInnerHTML={{__html: experience.tools}}/>
-                </div>
+                {experience.tools && (
+                    <div style={styles.responsibilities}>
+                        <i>Used methods and tools:</i>
+                        <div dangerouslySetInnerHTML={{ __html: experience.tools }} />
+                    </div>
+                )}
 
             </Paper>
         ))
@@ -126,9 +128,9 @@ function Experience() {
 
                         <div className={"fontStyle"}
                             // style={Object.assign(styles.titleSection, styles.paper)}>
-                             style={styles.titleSection}>
+                            style={styles.titleSection}>
 
-                            <h1 className={"subheading"}>Professional<br/>Experience</h1>
+                            <h1 className={"subheading"}>Professional<br />Experience</h1>
 
                         </div>
                     </Grid>
@@ -144,10 +146,10 @@ function Experience() {
                                             data-aos-delay="200"
                                             data-aos-duration="500"
                                         >
-                                            <TimelineOppositeContent style={styles.removeOppositeContent}/>
+                                            <TimelineOppositeContent style={styles.removeOppositeContent} />
                                             <TimelineSeparator>
-                                                <TimelineDot/>
-                                                <TimelineConnector/>
+                                                <TimelineDot />
+                                                <TimelineConnector />
                                             </TimelineSeparator>
                                             <TimelineContent>
                                                 {experiencePaper}
